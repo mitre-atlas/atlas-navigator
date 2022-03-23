@@ -1,14 +1,23 @@
 {
     "versions": [
         {
-            "name": "ATT&CK v10", 
+            "name": "ATLAS v3",
             "domains": [
-                {   
-                    "name": "Enterprise", 
+                {
+                    "name": "ATLAS",
+                    "data": ["https://raw.githubusercontent.com/mitre-atlas/atlas-navigator-data/main/dist/stix-atlas.json"]
+                }
+            ]
+        },
+        {
+            "name": "ATT&CK v10",
+            "domains": [
+                {
+                    "name": "Enterprise",
                     "data": ["https://raw.githubusercontent.com/mitre/cti/ATT%26CK-v10.1/enterprise-attack/enterprise-attack.json"]
                 },
-                {   
-                    "name": "Mobile", 
+                {
+                    "name": "Mobile",
                     "data": ["https://raw.githubusercontent.com/mitre/cti/ATT%26CK-v10.1/mobile-attack/mobile-attack.json"]
                 },
                 {
@@ -18,14 +27,14 @@
             ]
         },
         {
-            "name": "ATT&CK v9", 
+            "name": "ATT&CK v9",
             "domains": [
-                {   
-                    "name": "Enterprise", 
+                {
+                    "name": "Enterprise",
                     "data": ["https://raw.githubusercontent.com/mitre/cti/ATT%26CK-v9.0/enterprise-attack/enterprise-attack.json"]
                 },
-                {   
-                    "name": "Mobile", 
+                {
+                    "name": "Mobile",
                     "data": ["https://raw.githubusercontent.com/mitre/cti/ATT%26CK-v9.0/mobile-attack/mobile-attack.json"]
                 },
                 {
@@ -35,14 +44,14 @@
             ]
         },
         {
-            "name": "ATT&CK v8", 
+            "name": "ATT&CK v8",
             "domains": [
-                {   
-                    "name": "Enterprise", 
+                {
+                    "name": "Enterprise",
                     "data": ["https://raw.githubusercontent.com/mitre/cti/ATT%26CK-v8.2/enterprise-attack/enterprise-attack.json"]
                 },
-                {   
-                    "name": "Mobile", 
+                {
+                    "name": "Mobile",
                     "data": ["https://raw.githubusercontent.com/mitre/cti/ATT%26CK-v8.2/mobile-attack/mobile-attack.json"]
                 },
                 {
@@ -52,27 +61,27 @@
             ]
         },
         {
-            "name": "ATT&CK v7", 
+            "name": "ATT&CK v7",
             "domains": [
-                {   
-                    "name": "Enterprise", 
+                {
+                    "name": "Enterprise",
                     "data": ["https://raw.githubusercontent.com/mitre/cti/ATT%26CK-v7.2/enterprise-attack/enterprise-attack.json"]
                 },
-                {   
-                    "name": "Mobile", 
+                {
+                    "name": "Mobile",
                     "data": ["https://raw.githubusercontent.com/mitre/cti/ATT%26CK-v7.2/mobile-attack/mobile-attack.json"]
                 }
             ]
         },
         {
-            "name": "ATT&CK v6", 
+            "name": "ATT&CK v6",
             "domains": [
-                {   
-                    "name": "Enterprise", 
+                {
+                    "name": "Enterprise",
                     "data": ["https://raw.githubusercontent.com/mitre/cti/ATT%26CK-v6.3/enterprise-attack/enterprise-attack.json"]
                 },
-                {   
-                    "name": "Mobile", 
+                {
+                    "name": "Mobile",
                     "data": ["https://raw.githubusercontent.com/mitre/cti/ATT%26CK-v6.3/mobile-attack/mobile-attack.json"]
                 }
             ]
@@ -110,8 +119,11 @@
     ],
 
     "default_layers": {
-        "enabled": false,
-        "urls": ["assets/example.json", "https://raw.githubusercontent.com/mitre-attack/attack-navigator/master/layers/data/samples/Bear_APT.json"]
+        "enabled": true,
+        "urls": [
+            "https://raw.githubusercontent.com/mitre-atlas/atlas-navigator-data/main/dist/default-navigator-layers/atlas_layer_matrix.json",
+            "https://raw.githubusercontent.com/mitre-atlas/atlas-navigator-data/main/dist/default-navigator-layers/atlas_case_study_frequency.json"
+        ]
     },
 
     "comment_color": "yellow",
@@ -120,7 +132,7 @@
     "banner": "",
 
     "features": [
-        {"name": "leave_site_dialog", "enabled": true, "description": "Disable to remove the dialog prompt when leaving site."},
+        {"name": "leave_site_dialog", "enabled": false, "description": "Disable to remove the dialog prompt when leaving site."},
         {"name": "tabs", "enabled": true, "description": "Disable to remove the ability to open new tabs."},
         {"name": "selecting_techniques", "enabled": true, "description": "Disable to remove the ability to select techniques."},
         {"name": "header", "enabled": true, "description": "Disable to remove the header containing 'MITRE ATT&CK Navigator' and the link to the help page. The help page can still be accessed from the new tab menu."},
