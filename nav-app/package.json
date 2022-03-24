@@ -10,12 +10,12 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --host 0.0.0.0",
-    "build": "ng build --base-href /attack-navigator/",
+    "build": "ng build --output-path docs --base-href /attack-navigator/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "postinstall": "node patch-webpack.js",
-    "deploy-gh": "ng deploy --base-href=/attack-navigator/ --branch=atlas-gh-pages"
+    "deploy-gh": "push-dir --dir=docs --branch=atlas-gh-pages --allow-unclean"
   },
   "dependencies": {
     "@angular/animations": "^11.0.3",
