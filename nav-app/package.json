@@ -10,11 +10,12 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --host 0.0.0.0",
-    "build": "ng build --output-path docs --base-href /attack-navigator/",
+    "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "postinstall": "node patch-webpack.js",
+    "build-gh": "ng build --output-path docs --base-href /attack-navigator/",
     "deploy-gh": "push-dir --dir=docs --branch=atlas-gh-pages --allow-unclean"
   },
   "dependencies": {
