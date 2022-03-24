@@ -15,8 +15,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "postinstall": "node patch-webpack.js",
-    "build-gh": "ng build --output-path docs --base-href /atlas-navigator/",
-    "deploy-gh": "push-dir --dir=docs --branch=atlas-gh-pages --allow-unclean"
+    "build-gh": "ng build --base-href /atlas-navigator/",
+    "deploy-gh": "push-dir --dir=dist --branch=atlas-gh-pages --allow-unclean"
   },
   "dependencies": {
     "@angular/animations": "^11.0.3",
