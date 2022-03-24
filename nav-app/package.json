@@ -3,7 +3,7 @@
   "description": "Web app that provides basic navigation and annotation of ATT&CK matrices",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mitre-attack/attack-navigator.git"
+    "url": "https://github.com/mitre-atlas/atlas-navigator.git"
   },
   "version": "4.6.4",
   "license": "Apache-2.0",
@@ -15,7 +15,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "postinstall": "node patch-webpack.js",
-    "build-gh": "ng build --output-path docs --base-href /attack-navigator/",
+    "build-gh": "ng build --output-path docs --base-href /atlas-navigator/",
     "deploy-gh": "push-dir --dir=docs --branch=atlas-gh-pages --allow-unclean"
   },
   "dependencies": {
