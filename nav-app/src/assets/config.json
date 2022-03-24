@@ -121,8 +121,8 @@
     "default_layers": {
         "enabled": true,
         "urls": [
-            "https://raw.githubusercontent.com/mitre-atlas/atlas-navigator-data/main/dist/default-navigator-layers/atlas_layer_matrix.json",
-            "https://raw.githubusercontent.com/mitre-atlas/atlas-navigator-data/main/dist/default-navigator-layers/atlas_case_study_frequency.json"
+            "https://raw.githubusercontent.com/mitre-atlas/atlas-navigator-data/main/dist/default-navigator-layers/atlas_case_study_frequency.json",
+            "https://raw.githubusercontent.com/mitre-atlas/atlas-navigator-data/main/dist/default-navigator-layers/atlas_layer_matrix.json"
         ]
     },
 
