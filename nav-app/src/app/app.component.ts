@@ -36,7 +36,7 @@ export class AppComponent implements OnInit {
     } else if (getCookie("is_user_theme_dark") === "false") {
       this.user_theme = 'theme-override-light';
     }  else {
-      this.user_theme = 'theme-use-system';
+      this.user_theme = 'theme-override-light';
     }
   }
 
