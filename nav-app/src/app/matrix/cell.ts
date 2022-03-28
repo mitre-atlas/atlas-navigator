@@ -19,7 +19,7 @@ export abstract class Cell {
         this.dataService = dataService;
         this.configService = configService;
         if (hasCookie("is_user_theme_dark")) this.isDarkTheme = getCookie("is_user_theme_dark") === "true";
-        else this.isDarkTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        else this.isDarkTheme = false;
     }
 
     public get isHighlighted(): boolean {
