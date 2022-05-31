@@ -1,15 +1,25 @@
 {
     "versions": [
         {
+            "name": "ATLAS v3",
+            "version": "11",
+            "domains": [
+                {
+                    "name": "ATLAS",
+                    "data": ["https://raw.githubusercontent.com/mitre-atlas/atlas-navigator-data/main/dist/stix-atlas.json"]
+                }
+            ]
+        },
+        {
             "name": "ATT&CK v11",
             "version": "11",
             "domains": [
-                {   
+                {
                     "name": "Enterprise",
                     "identifier": "enterprise-attack",
                     "data": ["https://raw.githubusercontent.com/mitre/cti/ATT%26CK-v11.2/enterprise-attack/enterprise-attack.json"]
                 },
-                {   
+                {
                     "name": "Mobile",
                     "identifier": "mobile-attack",
                     "data": ["https://raw.githubusercontent.com/mitre/cti/ATT%26CK-v10.1/mobile-attack/mobile-attack.json"]
@@ -22,7 +32,7 @@
             ]
         },
         {
-            "name": "ATT&CK v10", 
+            "name": "ATT&CK v10",
             "version": "10",
             "domains": [
                 {
@@ -155,8 +165,11 @@
     ],
 
     "default_layers": {
-        "enabled": false,
-        "urls": ["assets/example.json", "https://raw.githubusercontent.com/mitre-attack/attack-navigator/master/layers/data/samples/Bear_APT.json"]
+        "enabled": true,
+        "urls": [
+            "https://raw.githubusercontent.com/mitre-atlas/atlas-navigator-data/main/dist/default-navigator-layers/atlas_layer_matrix.json",
+            "https://raw.githubusercontent.com/mitre-atlas/atlas-navigator-data/main/dist/default-navigator-layers/atlas_case_study_frequency.json"
+        ]
     },
 
     "comment_color": "yellow",
@@ -165,7 +178,7 @@
     "banner": "",
 
     "features": [
-        {"name": "leave_site_dialog", "enabled": true, "description": "Disable to remove the dialog prompt when leaving site."},
+        {"name": "leave_site_dialog", "enabled": false, "description": "Disable to remove the dialog prompt when leaving site."},
         {"name": "tabs", "enabled": true, "description": "Disable to remove the ability to open new tabs."},
         {"name": "selecting_techniques", "enabled": true, "description": "Disable to remove the ability to select techniques."},
         {"name": "header", "enabled": true, "description": "Disable to remove the header containing 'MITRE ATT&CK Navigator' and the link to the help page. The help page can still be accessed from the new tab menu."},
