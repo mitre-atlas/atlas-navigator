@@ -2,10 +2,11 @@
     "versions": [
         {
             "name": "ATLAS v3",
-            "version": "11",
+            "version": "3",
             "domains": [
                 {
                     "name": "ATLAS",
+                    "identifier": "atlas-atlas",
                     "data": ["https://raw.githubusercontent.com/mitre-atlas/atlas-navigator-data/main/dist/stix-atlas.json"]
                 }
             ]
