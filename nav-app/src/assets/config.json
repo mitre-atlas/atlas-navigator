@@ -1,6 +1,7 @@
 {
     "versions": [
         {
+<<<<<<< HEAD
             "name": "ATT&CK v12",
             "version": "12",
             "domains": [
@@ -18,6 +19,15 @@
                     "name": "ICS",
                     "identifier": "ics-attack",
                     "data": ["https://raw.githubusercontent.com/mitre/cti/ATT%26CK-v12.1/ics-attack/ics-attack.json"]
+=======
+            "name": "ATLAS v3",
+            "version": "3",
+            "domains": [
+                {
+                    "name": "ATLAS",
+                    "identifier": "atlas-atlas",
+                    "data": ["https://raw.githubusercontent.com/mitre-atlas/atlas-navigator-data/main/dist/stix-atlas.json"]
+>>>>>>> 92453d5 (Update to 4.6.4 config format with domain identifier)
                 }
             ]
         },
