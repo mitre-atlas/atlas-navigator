@@ -1,8 +1,8 @@
 {
     "versions": [
         {
-            "name": "ATLAS v3",
-            "version": "3",
+            "name": "ATLAS v4",
+            "version": "4",
             "domains": [
                 {
                     "name": "ATLAS",
