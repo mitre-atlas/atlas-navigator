@@ -1,0 +1,2558 @@
+{
+  "objects": [
+    {
+      "name": "Reconnaissance",
+      "description": "The adversary is trying to gather information they can use to plan\nfuture operations.\n\nReconnaissance consists of techniques that involve adversaries actively or passively gathering information that can be used to support targeting.\nSuch information may include details of the victim organizations machine learning capabilities and research efforts.\nThis information can be leveraged by the adversary to aid in other phases of the adversary lifecycle, such as using gathered information to obtain relevant ML artifacts, targeting ML capabilities used by the victim, tailoring attacks to the particular models used by the victim, or to drive and lead further Reconnaissance efforts.\n",
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/tactics/AML.TA0002",
+          "external_id": "AML.TA0002"
+        }
+      ],
+      "x_mitre_shortname": "reconnaissance",
+      "type": "x-mitre-tactic",
+      "spec_version": "2.1",
+      "id": "x-mitre-tactic--5e2f793f-24dd-4a9b-bd70-aab6e8919b6e",
+      "created": "2022-06-09T21:37:08.656812Z",
+      "modified": "2022-06-09T21:37:08.656812Z"
+    },
+    {
+      "name": "Resource Development",
+      "description": "The adversary is trying to establish resources they can use to support operations.\n\nResource Development consists of techniques that involve adversaries creating,\npurchasing, or compromising/stealing resources that can be used to support targeting.\nSuch resources include machine learning artifacts, infrastructure, accounts, or capabilities.\nThese resources can be leveraged by the adversary to aid in other phases of the adversary lifecycle, such as ML Attack Staging.\n",
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/tactics/AML.TA0003",
+          "external_id": "AML.TA0003"
+        }
+      ],
+      "x_mitre_shortname": "resource-development",
+      "type": "x-mitre-tactic",
+      "spec_version": "2.1",
+      "id": "x-mitre-tactic--42820f7b-6fd7-496a-98f2-c56d20f1f887",
+      "created": "2022-06-09T21:37:08.656922Z",
+      "modified": "2022-06-09T21:37:08.656922Z"
+    },
+    {
+      "name": "Initial Access",
+      "description": "The adversary is trying to gain access to the system containing machine learning artifacts.\n\nThe target system could be a network, mobile device, or an edge device such as a sensor platform.\nThe machine learning capabilities used by the system could be local with onboard or cloud enabled ML capabilities.\n\nInitial Access consists of techniques that use various entry vectors to gain their initial foothold within the system.\n",
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/tactics/AML.TA0004",
+          "external_id": "AML.TA0004"
+        }
+      ],
+      "x_mitre_shortname": "initial-access",
+      "type": "x-mitre-tactic",
+      "spec_version": "2.1",
+      "id": "x-mitre-tactic--996369b1-e754-4f58-af87-8d5aa1d80667",
+      "created": "2022-06-09T21:37:08.657022Z",
+      "modified": "2022-06-09T21:37:08.657022Z"
+    },
+    {
+      "name": "ML Model Access",
+      "description": "An adversary is attempting to gain some level of access to a machine learning model.\n\nML Model Access consists of techniques that use various types of access to the machine learning model that can be used by the adversary to gain information, develop attacks, and as a means to input data to the model.\nThe level of access can range from the full knowledge of the internals of the model to access to the physical environment where data is collected for use in the machine learning model.\nThe adversary may use varying levels of model access during the course of their attack, from staging the attack to impacting the target system.\n",
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/tactics/AML.TA0000",
+          "external_id": "AML.TA0000"
+        }
+      ],
+      "x_mitre_shortname": "ml-model-access",
+      "type": "x-mitre-tactic",
+      "spec_version": "2.1",
+      "id": "x-mitre-tactic--187e83c7-7a29-417b-aed1-7f1e89adc9cb",
+      "created": "2022-06-09T21:37:08.657118Z",
+      "modified": "2022-06-09T21:37:08.657118Z"
+    },
+    {
+      "name": "Execution",
+      "description": "The adversary is trying to run malicious code.\n\nExecution consists of techniques that result in adversary-controlled code running on a local or remote system.\nTechniques that run malicious code are often paired with techniques from all other tactics to achieve broader goals, like exploring a network or stealing data.\nFor example, an adversary might use a remote access tool to run a PowerShell script that does Remote System Discovery.\n",
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/tactics/AML.TA0005",
+          "external_id": "AML.TA0005"
+        }
+      ],
+      "x_mitre_shortname": "execution",
+      "type": "x-mitre-tactic",
+      "spec_version": "2.1",
+      "id": "x-mitre-tactic--5e856d48-61e3-4a8a-bde9-5da4a3e66aac",
+      "created": "2022-06-09T21:37:08.657243Z",
+      "modified": "2022-06-09T21:37:08.657243Z"
+    },
+    {
+      "name": "Persistence",
+      "description": "The adversary is trying to maintain their foothold.\n\nPersistence consists of techniques that adversaries use to keep access to systems across restarts, changed credentials, and other interruptions that could cut off their access.\nTechniques used for persistence often involve leaving behind modified ML artifacts such as poisoned training data or backdoored ML models.\n",
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/tactics/AML.TA0006",
+          "external_id": "AML.TA0006"
+        }
+      ],
+      "x_mitre_shortname": "persistence",
+      "type": "x-mitre-tactic",
+      "spec_version": "2.1",
+      "id": "x-mitre-tactic--9f662976-9ebf-42d0-ae9b-c6a1c452a261",
+      "created": "2022-06-09T21:37:08.657342Z",
+      "modified": "2022-06-09T21:37:08.657342Z"
+    },
+    {
+      "name": "Defense Evasion",
+      "description": "The adversary is trying to avoid being detected by security software.\n\nDefense Evasion consists of techniques that adversaries use to avoid detection throughout their compromise.\nTechniques used for defense evasion include evading ML-enabled security software such as malware detectors.\n",
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/tactics/AML.TA0007",
+          "external_id": "AML.TA0007"
+        }
+      ],
+      "x_mitre_shortname": "defense-evasion",
+      "type": "x-mitre-tactic",
+      "spec_version": "2.1",
+      "id": "x-mitre-tactic--e2383fc8-4f73-4970-b151-d72903b99464",
+      "created": "2022-06-09T21:37:08.657497Z",
+      "modified": "2022-06-09T21:37:08.657497Z"
+    },
+    {
+      "name": "Discovery",
+      "description": "The adversary is trying to figure out your environment.\n\nDiscovery consists of techniques an adversary may use to gain knowledge about the system and internal network.\nThese techniques help adversaries observe the environment and orient themselves before deciding how to act.\nThey also allow adversaries to explore what they can control and what's around their entry point in order to discover how it could benefit their current objective.\nNative operating system tools are often used toward this post-compromise information-gathering objective.\n",
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/tactics/AML.TA0008",
+          "external_id": "AML.TA0008"
+        }
+      ],
+      "x_mitre_shortname": "discovery",
+      "type": "x-mitre-tactic",
+      "spec_version": "2.1",
+      "id": "x-mitre-tactic--04d2f6a7-fca2-4a0b-9f52-1ca2fedc1317",
+      "created": "2022-06-09T21:37:08.657687Z",
+      "modified": "2022-06-09T21:37:08.657687Z"
+    },
+    {
+      "name": "Collection",
+      "description": "The adversary is trying to gather ML artifacts and other related information relevant to their goal.\n\nCollection consists of techniques adversaries may use to gather information and the sources information is collected from that are relevant to following through on the adversary's objectives.\nFrequently, the next goal after collecting data is to steal (exfiltrate) the ML artifacts, or use the collected information to stage future operations.\nCommon target sources include software repositories, container registries, model repositories, and object stores.\n",
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/tactics/AML.TA0009",
+          "external_id": "AML.TA0009"
+        }
+      ],
+      "x_mitre_shortname": "collection",
+      "type": "x-mitre-tactic",
+      "spec_version": "2.1",
+      "id": "x-mitre-tactic--53e5e71c-344d-4ac7-a138-da6bb460f23a",
+      "created": "2022-06-09T21:37:08.657793Z",
+      "modified": "2022-06-09T21:37:08.657793Z"
+    },
+    {
+      "name": "ML Attack Staging",
+      "description": "An adversary is leveraging their knowledge of and access to the target system to tailor the attack.\n\nML Attack Staging consists of techniques adversaries use to prepare their attack on the target ML model.\nTechniques can include training proxy models, poisoning the target model, and crafting adversarial data to feed the target model.\nSome of these techniques can be performed in an offline manor and are thus difficult to mitigate.\nThese techniques are often used to achieve the adversary's end goal.\n",
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/tactics/AML.TA0001",
+          "external_id": "AML.TA0001"
+        }
+      ],
+      "x_mitre_shortname": "ml-attack-staging",
+      "type": "x-mitre-tactic",
+      "spec_version": "2.1",
+      "id": "x-mitre-tactic--ae4aa8b0-9aa9-40eb-9782-8f0a48ff2dcf",
+      "created": "2022-06-09T21:37:08.657894Z",
+      "modified": "2022-06-09T21:37:08.657894Z"
+    },
+    {
+      "name": "Exfiltration",
+      "description": "The adversary is trying to steal machine learning artifacts.\n\nExfiltration consists of techniques that adversaries may use to steal data from your network.\nData may be stolen for it's valuable intellectual property, or for use in staging future operations.\n\nTechniques for getting data out of a target network typically include transferring it over their command and control channel or an alternate channel and may also include putting size limits on the transmission.\n",
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/tactics/AML.TA0010",
+          "external_id": "AML.TA0010"
+        }
+      ],
+      "x_mitre_shortname": "exfiltration",
+      "type": "x-mitre-tactic",
+      "spec_version": "2.1",
+      "id": "x-mitre-tactic--6f1d931c-c4a5-420f-a8f4-957b5f05d6c6",
+      "created": "2022-06-09T21:37:08.657994Z",
+      "modified": "2022-06-09T21:37:08.657994Z"
+    },
+    {
+      "name": "Impact",
+      "description": "The adversary is trying to manipulate, interrupt, erode confidence in, or destroy your systems and data.\n\nImpact consists of techniques that adversaries use to disrupt availability or compromise integrity by manipulating business and operational processes.\nTechniques used for impact can include destroying or tampering with data.\nIn some cases, business processes can look fine, but may have been altered to benefit the adversaries' goals.\nThese techniques might be used by adversaries to follow through on their end goal or to provide cover for a confidentiality breach.\n",
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/tactics/AML.TA0011",
+          "external_id": "AML.TA0011"
+        }
+      ],
+      "x_mitre_shortname": "impact",
+      "type": "x-mitre-tactic",
+      "spec_version": "2.1",
+      "id": "x-mitre-tactic--5510b387-7159-4d3c-ac10-a6fa85808d4c",
+      "created": "2022-06-09T21:37:08.658091Z",
+      "modified": "2022-06-09T21:37:08.658091Z"
+    },
+    {
+      "name": "Search for Victim's Publicly Available Research Materials",
+      "description": "Adversaries may search publicly available research to learn how and where machine learning is used within a victim organization.\nThe adversary can use this information to identify targets for attack, or to tailor an existing attack to make it more effective.\nOrganizations often use open source model architectures trained on additional proprietary data in production.\nKnowledge of this underlying architecture allows the adversary to craft more realistic proxy models ([Create Proxy ML Model](/techniques/AML.T0005)).\nAn adversary can search these resources for publications for authors employed at the victim organization.\n\nResearch materials may exist as academic papers published in [Journals and Conference Proceedings](/techniques/AML.T0000.000), or stored in [Pre-Print Repositories](/techniques/AML.T0000.001), as well as [Technical Blogs](/techniques/AML.T0000.002).\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "reconnaissance"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0000",
+          "external_id": "AML.T0000"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--3f7f850c-69fb-40e8-9595-0e8295d96d8d",
+      "created": "2022-06-09T21:37:08.646207Z",
+      "modified": "2022-06-09T21:37:08.646207Z"
+    },
+    {
+      "name": "Journals and Conference Proceedings",
+      "description": "Many of the publications accepted at premier machine learning conferences and journals come from commercial labs.\nSome journals and conferences are open access, others may require paying for access or a membership.\nThese publications will often describe in detail all aspects of a particular approach for reproducibility.\nThis information can be used by adversaries to implement the paper.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "reconnaissance"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0000.000",
+          "external_id": "AML.T0000.000"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "x_mitre_is_subtechnique": true,
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--9cacdb12-e61b-41b3-b64f-ccc9a06bfc9a",
+      "created": "2022-06-09T21:37:08.646533Z",
+      "modified": "2022-06-09T21:37:08.646533Z"
+    },
+    {
+      "name": "Pre-Print Repositories",
+      "description": "Pre-Print repositories, such as arXiv, contain the latest academic research papers that haven't been peer reviewed.\nThey may contain research notes, or technical reports that aren't typically published in journals or conference proceedings.\nPre-print repositories also serve as a central location to share papers that have been accepted to journals.\nSearching pre-print repositories  provide adversaries with a relatively up-to-date view of what researchers in the victim organization are working on.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "reconnaissance"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0000.001",
+          "external_id": "AML.T0000.001"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "x_mitre_is_subtechnique": true,
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--2136b777-15f9-432a-b0f9-c36b11067b22",
+      "created": "2022-06-09T21:37:08.647035Z",
+      "modified": "2022-06-09T21:37:08.647035Z"
+    },
+    {
+      "name": "Technical Blogs",
+      "description": "Research labs at academic institutions and Company R&D divisions often have blogs that highlight their use of machine learning and its application to the organizations unique problems.\nIndividual researchers also frequently document their work in blogposts.\nAn adversary may search for posts made by the target victim organization or its employees.\nIn comparison to [Journals and Conference Proceedings](/techniques/AML.T0000.000) and [Pre-Print Repositories](/techniques/AML.T0000.001) this material will often contain more practical aspects of the machine learning system.\nThis could include underlying technologies and frameworks used, and possibly some information about the API access and use case.\nThis will help the adversary better understand how that organization is using machine learning internally and the details of their approach that could aid in tailoring an attack.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "reconnaissance"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0000.002",
+          "external_id": "AML.T0000.002"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "x_mitre_is_subtechnique": true,
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--63ed08b8-32b8-4b2d-9f44-02be2e6ad7c9",
+      "created": "2022-06-09T21:37:08.647253Z",
+      "modified": "2022-06-09T21:37:08.647253Z"
+    },
+    {
+      "name": "Search for Publicly Available Adversarial Vulnerability Analysis",
+      "description": "Much like the [Search for Victim's Publicly Available Research Materials](/techniques/AML.T0000), there is often ample research available on the vulnerabilities of common models. Once a target has been identified, an adversary will likely try to identify any pre-existing work that has been done for this class of models.\nThis will include not only reading academic papers that may identify the particulars of a successful attack, but also identifying pre-existing implementations of those attacks. The adversary may [Adversarial ML Attack Implementations](/techniques/AML.T0016.000) or [Develop Adversarial ML Attack Capabilities](/techniques/AML.T0017) their own if necessary.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "reconnaissance"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0001",
+          "external_id": "AML.T0001"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--b8c96324-9373-49b2-8138-a474a391e9da",
+      "created": "2022-06-09T21:37:08.647469Z",
+      "modified": "2022-06-09T21:37:08.647469Z"
+    },
+    {
+      "name": "Search Victim-Owned Websites",
+      "description": "Adversaries may search websites owned by the victim for information that can be used during targeting.\nVictim-owned websites may contain technical details about their ML-enabled products or services.\nVictim-owned websites may contain a variety of details, including names of departments/divisions, physical locations, and data about key employees such as names, roles, and contact info.\nThese sites may also have details highlighting business operations and relationships.\n\nAdversaries may search victim-owned websites to gather actionable information.\nThis information may help adversaries tailor their attacks (e.g. [Develop Adversarial ML Attack Capabilities](/techniques/AML.T0017) or [Manual Modification](/techniques/AML.T0043.003)).\nInformation from these sources may reveal opportunities for other forms of reconnaissance (e.g. [Search for Victim's Publicly Available Research Materials](/techniques/AML.T0000) or [Search for Publicly Available Adversarial Vulnerability Analysis](/techniques/AML.T0001))\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "reconnaissance"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0003",
+          "external_id": "AML.T0003"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--aa970751-1d2f-4c04-9c1a-599f91452fc8",
+      "created": "2022-06-09T21:37:08.647591Z",
+      "modified": "2022-06-09T21:37:08.647591Z"
+    },
+    {
+      "name": "Search Application Repositories",
+      "description": "Adversaries may search open application repositories during targeting.\nExamples of these include Google Play, the iOS App store, the macOS App Store, and the Microsoft Store.\n\nAdversaries may craft search queries seeking applications that contain a ML-enabled components.\nFrequently, the next step is to [Acquire Public ML Artifacts](/techniques/AML.T0002).\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "reconnaissance"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0004",
+          "external_id": "AML.T0004"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--b8f579a4-4036-425e-8144-6cf9c0f27624",
+      "created": "2022-06-09T21:37:08.647713Z",
+      "modified": "2022-06-09T21:37:08.647713Z"
+    },
+    {
+      "name": "Active Scanning",
+      "description": "An adversary may probe or scan the victim system to gather information for targeting.\nThis is distinct from other reconnaissance techniques that do not involve direct interaction with the victim system.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "reconnaissance"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0006",
+          "external_id": "AML.T0006"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--11ec0628-6816-49bf-9155-5ccccf273d70",
+      "created": "2022-06-09T21:37:08.647833Z",
+      "modified": "2022-06-09T21:37:08.647833Z"
+    },
+    {
+      "name": "Acquire Public ML Artifacts",
+      "description": "Adversaries may search public sources, including cloud storage, public-facing services, and software or data repositories, to identify machine learning artifacts.\nThese machine learning artifacts may include the software stack used to train and deploy models, training and testing data, model configurations and parameters.\nAn adversary will be particularly interested in artifacts hosted by or associated with the victim organization as they may represent what that organization uses in a production environment.\nAdversaries may identify artifact repositories via other resources associated with the victim organization (e.g. [Search Victim-Owned Websites](/techniques/AML.T0003) or [Search for Victim's Publicly Available Research Materials](/techniques/AML.T0000)).\nThese ML artifacts often provide adversaries with details of the ML task and approach.\n\nML artifacts can aid in an adversary's ability to [Create Proxy ML Model](/techniques/AML.T0005).\nIf these artifacts include pieces of the actual model in production, they can be used to directly [Craft Adversarial Data](/techniques/AML.T0043).\nAcquiring some artifacts requires registration (providing user details such email/name), AWS keys, or written requests, and may require the adversary to [Establish Accounts](/techniques/AML.T0021).\n\nArtifacts might be hosted on victim-controlled infrastructure, providing the victim with some information on who has accessed that data.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "resource-development"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0002",
+          "external_id": "AML.T0002"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--2c333d27-4d3e-4af3-96ff-ef6fd90999da",
+      "created": "2022-06-09T21:37:08.647954Z",
+      "modified": "2022-06-09T21:37:08.647954Z"
+    },
+    {
+      "name": "Datasets",
+      "description": "Adversaries may collect public datasets to use in their operations.\nDatasets used by the victim organization or datasets that are representative of the data used by the victim organization may be valuable to adversaries.\nDatasets can be stored in cloud storage, or on victim-owned websites.\nSome datasets require the adversary to [Establish Accounts](/techniques/AML.T0021) for access.\n\nAcquired datasets help the adversary advance their operations, stage attacks,  and tailor attacks to the victim organization.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "resource-development"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0002.000",
+          "external_id": "AML.T0002.000"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "x_mitre_is_subtechnique": true,
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--f3388cbf-7745-4cc0-84d6-202adb14c7cb",
+      "created": "2022-06-09T21:37:08.648107Z",
+      "modified": "2022-06-09T21:37:08.648107Z"
+    },
+    {
+      "name": "Models",
+      "description": "Adversaries may acquire public models to use in their operations.\nAdversaries may seek models used by the victim organization or models that are representative of those used by the victim organization.\nRepresentative models may include model architectures, or pre-trained models which define the architecture as well as model parameters from training on a dataset.\nThe adversary may search public sources for common model architecture configuration file formats such as yaml or python configuration files, and common model storage file formats such as ONNX (.onnx), HDF5 (.h5), Pickle (.pkl), PyTorch (.pth), or TensorFlow (.pb, .tflite).\n\nAcquired models are useful in advancing the adversary's operations and are frequently used to tailor attacks to the victim model.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "resource-development"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0002.001",
+          "external_id": "AML.T0002.001"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "x_mitre_is_subtechnique": true,
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--07cd92eb-74e3-4594-8b3b-aa2ea3b2bd2b",
+      "created": "2022-06-09T21:37:08.648312Z",
+      "modified": "2022-06-09T21:37:08.648312Z"
+    },
+    {
+      "name": "Obtain Capabilities",
+      "description": "Adversaries may search for and obtain software capabilities for use in their operations.\nCapabilities may be specific to ML-based attacks [Adversarial ML Attack Implementations](/techniques/AML.T0016.000) or generic software tools repurposed for malicious intent ([Software Tools](/techniques/AML.T0016.001)). In both instances, an adversary may modify or customize the capability to aid in targeting a particular ML system.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "resource-development"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0016",
+          "external_id": "AML.T0016"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--f847ecea-ca40-4e1a-955e-8144dcced884",
+      "created": "2022-06-09T21:37:08.648524Z",
+      "modified": "2022-06-09T21:37:08.648524Z"
+    },
+    {
+      "name": "Adversarial ML Attack Implementations",
+      "description": "Adversaries may search for existing open source implementations of machine learning attacks. The research community often publishes their code for reproducibility and to further future research. Libraries intended for research purposes, such as CleverHans, the Adversarial Robustness Toolbox, and FoolBox, can be weaponized by an adversary. Adversaries may also obtain and use tools that were not originally designed for adversarial ML attacks as part of their attack.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "resource-development"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0016.000",
+          "external_id": "AML.T0016.000"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "x_mitre_is_subtechnique": true,
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--47a7aaac-bab1-41d2-88c1-df7307676f6a",
+      "created": "2022-06-09T21:37:08.648628Z",
+      "modified": "2022-06-09T21:37:08.648628Z"
+    },
+    {
+      "name": "Software Tools",
+      "description": "Adversaries may search for and obtain software tools to support their operations. Software designed for legitimate use may be repurposed by an adversary for malicious intent. An adversary may modify or customize software tools to achieve their purpose. Software tools used to support attacks on ML systems are not necessarily ML-based themselves.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "resource-development"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0016.001",
+          "external_id": "AML.T0016.001"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "x_mitre_is_subtechnique": true,
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--8446e625-c96b-43a9-95ab-aaa82c48a97a",
+      "created": "2022-06-09T21:37:08.648818Z",
+      "modified": "2022-06-09T21:37:08.648818Z"
+    },
+    {
+      "name": "Develop Adversarial ML Attack Capabilities",
+      "description": "Adversaries may develop their own adversarial attacks. They may leverage existing libraries as a starting point ([Adversarial ML Attack Implementations](/techniques/AML.T0016.000)). They may implement ideas described in public research papers or develop custom made attacks for the victim model.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "resource-development"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0017",
+          "external_id": "AML.T0017"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--093212ac-a70d-4fff-8102-402581e8dd8d",
+      "created": "2022-06-09T21:37:08.649029Z",
+      "modified": "2022-06-09T21:37:08.649029Z"
+    },
+    {
+      "name": "Acquire Infrastructure",
+      "description": "Adversaries may buy, lease, or rent infrastructure for use throughout their operation.\nA wide variety of infrastructure exists for hosting and orchestrating adversary operations.\nInfrastructure solutions include physical or cloud servers, domains, mobile devices, and third-party web services.\nFree resources may also be used, but they are typically limited.\n\nUse of these infrastructure solutions allows an adversary to stage, launch, and execute an operation.\nSolutions may help adversary operations blend in with traffic that is seen as normal, such as contact to third-party web services.\nDepending on the implementation, adversaries may use infrastructure that makes it difficult to physically tie back to them as well as utilize infrastructure that can be rapidly provisioned, modified, and shut down.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "resource-development"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0008",
+          "external_id": "AML.T0008"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--81793dd5-0f77-461a-9d4c-e65ae4a46023",
+      "created": "2022-06-09T21:37:08.649151Z",
+      "modified": "2022-06-09T21:37:08.649151Z"
+    },
+    {
+      "name": "ML Development Workspaces",
+      "description": "Developing and staging machine learning attacks often requires expensive compute resources.\nAdversaries may need access to one or many GPUs in order to develop an attack.\nThey may try to anonymously use free resources such as Google Colaboratory, or cloud resources such as AWS, Azure, or Google Cloud as an efficient way to stand up temporary resources to conduct operations.\nMultiple workspaces may be used to avoid detection.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "resource-development"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0008.000",
+          "external_id": "AML.T0008.000"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "x_mitre_is_subtechnique": true,
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--4dc9414d-121a-4a2a-a550-bfeb2447e797",
+      "created": "2022-06-09T21:37:08.649254Z",
+      "modified": "2022-06-09T21:37:08.649254Z"
+    },
+    {
+      "name": "Consumer Hardware",
+      "description": "Adversaries may acquire consumer hardware to conduct their attacks.\nOwning the hardware provides the adversary with complete control of the environment. These devices can be hard to trace.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "resource-development"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0008.001",
+          "external_id": "AML.T0008.001"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "x_mitre_is_subtechnique": true,
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--7df36a3b-c8da-4bbd-a6bf-27c8c27e7e63",
+      "created": "2022-06-09T21:37:08.649452Z",
+      "modified": "2022-06-09T21:37:08.649452Z"
+    },
+    {
+      "name": "Publish Poisoned Datasets",
+      "description": "Adversaries may [Poison Training Data](/techniques/AML.T0020) and publish it to a public location.\nThe poisoned dataset may be a novel dataset or a poisoned variant of an existing open source dataset.\nThis data may be introduced to a victim system via [ML Supply Chain Compromise](/techniques/AML.T0010).\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "resource-development"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0019",
+          "external_id": "AML.T0019"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--d01ff63a-6456-4ba0-a1ab-56ac2da210e5",
+      "created": "2022-06-09T21:37:08.64966Z",
+      "modified": "2022-06-09T21:37:08.64966Z"
+    },
+    {
+      "name": "ML Supply Chain Compromise",
+      "description": "Adversaries may gain initial access to a system by compromising the unique portions of the ML supply chain.\nThis could include [GPU Hardware](/techniques/AML.T0010.000), [Data](/techniques/AML.T0010.002) and its annotations, parts of the ML [ML Software](/techniques/AML.T0010.001) stack, or the [Model](/techniques/AML.T0010.003) itself.\nIn some instances the attacker will need secondary access to fully carry out an attack using compromised components of the supply chain.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "initial-access"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0010",
+          "external_id": "AML.T0010"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--7361e80d-e3e7-4e08-b93a-b7d17c3c6a52",
+      "created": "2022-06-09T21:37:08.649781Z",
+      "modified": "2022-06-09T21:37:08.649781Z"
+    },
+    {
+      "name": "GPU Hardware",
+      "description": "Most machine learning systems require access to certain specialized hardware, typically GPUs.\nAdversaries can target machine learning systems by specifically targeting the GPU supply chain.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "initial-access"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0010.000",
+          "external_id": "AML.T0010.000"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "x_mitre_is_subtechnique": true,
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--4b039ffc-1814-4f0f-9441-2b816be0da36",
+      "created": "2022-06-09T21:37:08.649885Z",
+      "modified": "2022-06-09T21:37:08.649885Z"
+    },
+    {
+      "name": "ML Software",
+      "description": "Most machine learning systems rely on a limited set of machine learning frameworks.\nAn adversary could get access to a large number of machine learning systems through a comprise of one of their supply chains.\nMany machine learning projects also rely on other open source implementations of various algorithms.\nThese can also be compromised in a targeted way to get access to specific systems.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "initial-access"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0010.001",
+          "external_id": "AML.T0010.001"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "x_mitre_is_subtechnique": true,
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--88bc1a30-b74e-41de-8c44-5c11bc7eb7f2",
+      "created": "2022-06-09T21:37:08.650077Z",
+      "modified": "2022-06-09T21:37:08.650077Z"
+    },
+    {
+      "name": "Data",
+      "description": "Data is a key vector of supply chain compromise for adversaries.\nEvery machine learning project will require some form of data.\nMany rely on large open source datasets that are publicly available.\nAn adversary could rely on compromising these sources of data.\nThe malicious data could be a result of [Poison Training Data](/techniques/AML.T0020) or include traditional malware.\n\nAn adversary can also target private datasets in the labeling phase.\nThe creation of private datasets will often require the hiring of outside labeling services.\nAn adversary can poison a dataset by modifying the labels being generated by the labeling service.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "initial-access"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0010.002",
+          "external_id": "AML.T0010.002"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "x_mitre_is_subtechnique": true,
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--da3a337f-ffd1-43c0-95ed-554eb66b3fbd",
+      "created": "2022-06-09T21:37:08.650272Z",
+      "modified": "2022-06-09T21:37:08.650272Z"
+    },
+    {
+      "name": "Model",
+      "description": "Machine learning systems often rely on open sourced models in various ways.\nMost commonly, the victim organization may be using these models for fine tuning.\nThese models will be downloaded from an external source and then used as the base for the model as it is tuned on a smaller, private dataset.\nLoading models often requires executing some saved code in the form of a saved model file.\nThese can be compromised with traditional malware, or through some adversarial machine learning techniques.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "initial-access"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0010.003",
+          "external_id": "AML.T0010.003"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "x_mitre_is_subtechnique": true,
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--62bf9e85-ee34-4bc8-902c-3306760a9d50",
+      "created": "2022-06-09T21:37:08.650462Z",
+      "modified": "2022-06-09T21:37:08.650462Z"
+    },
+    {
+      "name": "ML Model Inference API Access",
+      "description": "Adversaries may gain access to a model via legitimate access to the inference API.\nInference API access can be a source of information to the adversary ([Discover ML Model Ontology](/techniques/AML.T0013), [Discover ML Model Family](/techniques/AML.T0013)), a means of staging the attack ([Verify Attack](/techniques/AML.T0042), [Craft Adversarial Data](/techniques/AML.T0043)), or for introducing data to the target system for Impact ([Evade ML Model](/techniques/AML.T0015), [Erode ML Model Integrity](/techniques/AML.T0031)).\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "ml-model-access"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0040",
+          "external_id": "AML.T0040"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--c38caf1a-a657-43d1-a40a-fd34fafbead3",
+      "created": "2022-06-09T21:37:08.650675Z",
+      "modified": "2022-06-09T21:37:08.650675Z"
+    },
+    {
+      "name": "ML-Enabled Product or Service",
+      "description": "Adversaries may use a product or service that uses machine learning under the hood to gain access to the underlying machine learning model.\nThis type of indirect model access may reveal details of the ML model or its inferences in logs or metadata.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "ml-model-access"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0047",
+          "external_id": "AML.T0047"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--f87b9567-39b7-49cf-9d57-db1f60663027",
+      "created": "2022-06-09T21:37:08.650796Z",
+      "modified": "2022-06-09T21:37:08.650796Z"
+    },
+    {
+      "name": "Physical Environment Access",
+      "description": "In addition to the attacks that take place purely in the digital domain, adversaries may also exploit the physical environment for their attacks.\nIf the model is interacting with data collected from the real world in some way, the adversary can influence the model through access to wherever the data is being collected.\nBy modifying the data in the collection process, the adversary can perform modified versions of attacks designed for digital access.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "ml-model-access"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0041",
+          "external_id": "AML.T0041"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--f021f106-7616-4d35-a688-2e09354bed6c",
+      "created": "2022-06-09T21:37:08.650915Z",
+      "modified": "2022-06-09T21:37:08.650915Z"
+    },
+    {
+      "name": "Full ML Model Access",
+      "description": "Adversaries may gain full \"white-box\" access to a machine learning model.\nThis means the adversary has complete knowledge of the model architecture, its parameters, and class ontology.\nThey may exfiltrate the model to [Craft Adversarial Data](/techniques/AML.T0043) and [Verify Attack](/techniques/AML.T0042) in an offline where it is hard to detect their behavior.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "ml-model-access"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0044",
+          "external_id": "AML.T0044"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--fe26acd8-f05b-4ce0-89f2-8194831db098",
+      "created": "2022-06-09T21:37:08.651032Z",
+      "modified": "2022-06-09T21:37:08.651032Z"
+    },
+    {
+      "name": "Discover ML Model Ontology",
+      "description": "Adversaries may discover the ontology of a machine learning model's output space, for example, the types of objects a model can detect.\nThe adversary may discovery the ontology by repeated queries to the model, forcing it to enumerate its output space.\nOr the ontology may be discovered in a configuration file or in documentation about the model.\n\nThe model ontology helps the adversary understand how the model is being used by the victim.\nIt is useful to the adversary in creating targeted attacks.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "discovery"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0013",
+          "external_id": "AML.T0013"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--bb48fe01-f47d-43b0-85e9-73205b5c99cf",
+      "created": "2022-06-09T21:37:08.651183Z",
+      "modified": "2022-06-09T21:37:08.651183Z"
+    },
+    {
+      "name": "Discover ML Model Family",
+      "description": "Adversaries may discover the general family of model.\nGeneral information about the model may be revealed in documentation, or the adversary may used carefully constructed examples and analyze the model's responses to categorize it.\n\nKnowledge of the model family can help the adversary identify means of attacking the model and help tailor the attack.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "discovery"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0014",
+          "external_id": "AML.T0014"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--171c4ee1-5ff4-4470-8cc8-0eaabbb7632d",
+      "created": "2022-06-09T21:37:08.651301Z",
+      "modified": "2022-06-09T21:37:08.651301Z"
+    },
+    {
+      "name": "Poison Training Data",
+      "description": "Adversaries may attempt to poison datasets used by a ML model by modifying the underlying data or its labels.\nThis allows the adversary to embed vulnerabilities in ML models trained on the data that may not be easily detectable.\nData poisoning attacks may or may not require modifying the labels.\nThe embedded vulnerability is activated at a later time by data samples with an [Insert Backdoor Trigger](/techniques/AML.T0043.004)\n\nPoisoned data can be introduced via [ML Supply Chain Compromise](/techniques/AML.T0010) or the data may be poisoned after the adversary gains [Initial Access](/tactics/AML.TA0004) to the system.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "resource-development"
+        },
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "persistence"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0020",
+          "external_id": "AML.T0020"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--b177ba40-3538-48f2-9dc2-e87ef9babb9e",
+      "created": "2022-06-09T21:37:08.651481Z",
+      "modified": "2022-06-09T21:37:08.651481Z"
+    },
+    {
+      "name": "Establish Accounts",
+      "description": "Adversaries may create accounts with various services for use in targeting, to gain access to resources needed in [ML Attack Staging](/tactics/AML.TA0001), or for victim impersonation.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "resource-development"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0021",
+          "external_id": "AML.T0021"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--77f607a9-928e-48b3-8e64-8a366e38fae9",
+      "created": "2022-06-09T21:37:08.651617Z",
+      "modified": "2022-06-09T21:37:08.651617Z"
+    },
+    {
+      "name": "Create Proxy ML Model",
+      "description": "Adversaries may obtain models to serve as proxies for the target model in use at the victim organization.\nProxy models are used to simulate complete access to the target model in a fully offline manner.\n\nAdversaries may train models from representative datasets, attempt to replicate models from victim inference APIs, or use available pre-trained models.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "ml-attack-staging"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0005",
+          "external_id": "AML.T0005"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--962faff5-9636-43bf-bed9-f76fa1c83f17",
+      "created": "2022-06-09T21:37:08.651736Z",
+      "modified": "2022-06-09T21:37:08.651736Z"
+    },
+    {
+      "name": "Train Proxy via Gathered ML Artifacts",
+      "description": "Proxy models may be trained from ML artifacts (such as data, model architectures, and pre-trained models) that are representative of the target model gathered by the adversary.\nThis can be used to develop attacks that require higher levels of access than the adversary has available or as a means to validate pre-existing attacks without interacting with the target model.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "ml-attack-staging"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0005.000",
+          "external_id": "AML.T0005.000"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "x_mitre_is_subtechnique": true,
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--7af86ed8-a074-4ddc-ba57-d6d6810806e6",
+      "created": "2022-06-09T21:37:08.651842Z",
+      "modified": "2022-06-09T21:37:08.651842Z"
+    },
+    {
+      "name": "Train Proxy via Replication",
+      "description": "Adversaries may replicate a private model.\nBy repeatedly querying the victim's [ML Model Inference API Access](/techniques/AML.T0040), the adversary can collect the target model's inferences into a dataset.\nThe inferences are used as labels for training a separate model offline that will mimic the behavior and performance of the target model.\n\nA replicated model that closely mimic's the target model is a valuable resource in staging the attack.\nThe adversary can use the replicated model to [Craft Adversarial Data](/techniques/AML.T0043) for various purposes (e.g. [Evade ML Model](/techniques/AML.T0015), [Spamming ML System with Chaff Data](/techniques/AML.T0046)).\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "ml-attack-staging"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0005.001",
+          "external_id": "AML.T0005.001"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "x_mitre_is_subtechnique": true,
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--0c9aaa46-c2e7-4c98-9a9e-81e5ec236b52",
+      "created": "2022-06-09T21:37:08.652046Z",
+      "modified": "2022-06-09T21:37:08.652046Z"
+    },
+    {
+      "name": "Use Pre-Trained Model",
+      "description": "Adversaries may use an off-the-shelf pre-trained model as a proxy for the victim model to aid in staging the attack.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "ml-attack-staging"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0005.002",
+          "external_id": "AML.T0005.002"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "x_mitre_is_subtechnique": true,
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--7b226ce0-cf6a-4a95-9baf-6b0a29055599",
+      "created": "2022-06-09T21:37:08.652249Z",
+      "modified": "2022-06-09T21:37:08.652249Z"
+    },
+    {
+      "name": "Discover ML Artifacts",
+      "description": "Adversaries may search private sources to identify machine learning artifacts that exist on the system and gather information about them.\nThese artifacts can include the software stack used to train and deploy models, training and testing data management systems, container registries, software repositories, and model zoos.\n\nThis information can be used to identify targets for further collection, exfiltration, or disruption, and to tailor and improve attacks.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "discovery"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0007",
+          "external_id": "AML.T0007"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--e007868f-4f69-4243-939c-0d948a52d2df",
+      "created": "2022-06-09T21:37:08.652497Z",
+      "modified": "2022-06-09T21:37:08.652497Z"
+    },
+    {
+      "name": "User Execution",
+      "description": "An adversary may rely upon specific actions by a user in order to gain execution.\nUsers may inadvertently execute unsafe code introduced via [ML Supply Chain Compromise](/techniques/AML.T0010).\nUsers may be subjected to social engineering to get them to execute malicious code by, for example, opening a malicious document file or link.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "execution"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0011",
+          "external_id": "AML.T0011"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--ee9244a3-13b3-4422-ac2e-de0cef7eb889",
+      "created": "2022-06-09T21:37:08.652622Z",
+      "modified": "2022-06-09T21:37:08.652622Z"
+    },
+    {
+      "name": "Unsafe ML Artifacts",
+      "description": "Adversaries may develop unsafe ML artifacts that when executed have a deleterious effect.\nThe adversary can use this technique to establish persistent access to systems.\nThese models may be introduced via a [ML Supply Chain Compromise](/techniques/AML.T0010).\n\nSerialization of models is a popular technique for model storage, transfer, and loading.\nHowever, this format without proper checking presents an opportunity for code execution.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "execution"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0011.000",
+          "external_id": "AML.T0011.000"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "x_mitre_is_subtechnique": true,
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--9eb18369-63a4-474e-b3f0-ecf659738aed",
+      "created": "2022-06-09T21:37:08.65273Z",
+      "modified": "2022-06-09T21:37:08.65273Z"
+    },
+    {
+      "name": "Valid Accounts",
+      "description": "Adversaries may obtain and abuse credentials of existing accounts as a means of gaining Initial Access.\nCredentials may take the form of usernames and passwords of individual user accounts or API keys that provide access to various ML resources and services.\n\nCompromised credentials may provide access to additional ML artifacts and allow the adversary to perform [Discover ML Artifacts](/techniques/AML.T0007).\nCompromised credentials may also grant and adversary increased privileges such as write access to ML artifacts used during development or production.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "initial-access"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0012",
+          "external_id": "AML.T0012"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--c9178add-be85-487f-a7ab-d2bbf5e69408",
+      "created": "2022-06-09T21:37:08.652949Z",
+      "modified": "2022-06-09T21:37:08.652949Z"
+    },
+    {
+      "name": "Evade ML Model",
+      "description": "Adversaries can [Craft Adversarial Data](/techniques/AML.T0043) that prevent a machine learning model from correctly identifying the contents of the data.\nThis technique can be used to evade a downstream task where machine learning is utilized.\nThe adversary may evade machine learning based virus/malware detection, or network scanning towards the goal of a traditional cyber attack.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "defense-evasion"
+        },
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "impact"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0015",
+          "external_id": "AML.T0015"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--f4ed7571-4105-4fa0-bdc6-64e298d5c4d3",
+      "created": "2022-06-09T21:37:08.653097Z",
+      "modified": "2022-06-09T21:37:08.653097Z"
+    },
+    {
+      "name": "Backdoor ML Model",
+      "description": "Adversaries may introduce a backdoor into a ML model.\nA backdoored model operates performs as expected under typical conditions, but will produce the adversary's desired output when a trigger is introduced to the input data.\nA backdoored model provides the adversary with a persistent artifact on the victim system.\nThe embedded vulnerability is typically activated at a later time by data samples with an [Insert Backdoor Trigger](/techniques/AML.T0043.004)\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "persistence"
+        },
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "ml-attack-staging"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0018",
+          "external_id": "AML.T0018"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--03763c4f-dbec-465a-9d54-8b929f55a3a6",
+      "created": "2022-06-09T21:37:08.653242Z",
+      "modified": "2022-06-09T21:37:08.653242Z"
+    },
+    {
+      "name": "Poison ML Model",
+      "description": "Adversaries may introduce a backdoor by training the model poisoned data, or by interfering with its training process.\nThe model learns to associate a adversary defined trigger with the adversary's desired output.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "persistence"
+        },
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "ml-attack-staging"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0018.000",
+          "external_id": "AML.T0018.000"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "x_mitre_is_subtechnique": true,
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--98490c87-fb42-4503-b45b-1015ef82d944",
+      "created": "2022-06-09T21:37:08.653345Z",
+      "modified": "2022-06-09T21:37:08.653345Z"
+    },
+    {
+      "name": "Inject Payload",
+      "description": "Adversaries may introduce a backdoor into a model by injecting a payload into the model file.\nThe payload detects the presence of the trigger and bypasses the model, instead producing the adversary's desired output.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "persistence"
+        },
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "ml-attack-staging"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0018.001",
+          "external_id": "AML.T0018.001"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "x_mitre_is_subtechnique": true,
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--7fdf0e9e-6e00-4797-91c0-42a6fd869439",
+      "created": "2022-06-09T21:37:08.653556Z",
+      "modified": "2022-06-09T21:37:08.653556Z"
+    },
+    {
+      "name": "Exfiltration via ML Inference API",
+      "description": "Adversaries may exfiltrate private information via [ML Model Inference API Access](/techniques/AML.T0040).\nML Models have been shown leak private information about their training data (e.g.  [Infer Training Data Membership](/techniques/AML.T0024.000), [Invert ML Model](/techniques/AML.T0024.001)).\nThe model itself may also be extracted ([Extract ML Model](/techniques/AML.T0024.002)) for the purposes of [ML Intellectual Property Theft](/techniques/AML.T0045).\n\nExfiltration of information relating to private training data raises privacy concerns.\nPrivate training data may include personally identifiable information, or other protected data.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "exfiltration"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0024",
+          "external_id": "AML.T0024"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--0be218da-ed7b-4663-902c-49a5296ef1ae",
+      "created": "2022-06-09T21:37:08.653773Z",
+      "modified": "2022-06-09T21:37:08.653773Z"
+    },
+    {
+      "name": "Infer Training Data Membership",
+      "description": "Adversaries may infer the membership of a data sample in its training set, which raises privacy concerns.\nSome strategies make use of a shadow model that could be obtained via [Train Proxy via Replication](/techniques/AML.T0005.001), others use statistics of model prediction scores.\n\nThis can cause the victim model to leak private information, such as PII of those in the training set or other forms of protected IP.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "exfiltration"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0024.000",
+          "external_id": "AML.T0024.000"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "x_mitre_is_subtechnique": true,
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--172c7ac0-7d68-4301-9805-360b67aed970",
+      "created": "2022-06-09T21:37:08.653886Z",
+      "modified": "2022-06-09T21:37:08.653886Z"
+    },
+    {
+      "name": "Invert ML Model",
+      "description": "Machine learning models' training data could be reconstructed by exploiting the confidence scores that are available via an inference API.\nBy querying the inference API strategically, adversaries can back out potentially private information embedded within the training data.\nThis could lead to privacy violations if the attacker can reconstruct the data of sensitive features used in the algorithm.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "exfiltration"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0024.001",
+          "external_id": "AML.T0024.001"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "x_mitre_is_subtechnique": true,
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--5f27846e-2eff-45eb-95a1-a4b0649a79b8",
+      "created": "2022-06-09T21:37:08.654091Z",
+      "modified": "2022-06-09T21:37:08.654091Z"
+    },
+    {
+      "name": "Extract ML Model",
+      "description": "Adversaries may extract a functional copy of a private model.\nBy repeatedly querying the victim's [ML Model Inference API Access](/techniques/AML.T0040), the adversary can collect the target model's inferences into a dataset.\nThe inferences are used as labels for training a separate model offline that will mimic the behavior and performance of the target model.\n\nAdversaries may extract the model to avoid paying per query in a machine learning as a service setting.\nModel extraction is used for [ML Intellectual Property Theft](/techniques/AML.T0045).\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "exfiltration"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0024.002",
+          "external_id": "AML.T0024.002"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "x_mitre_is_subtechnique": true,
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--19825582-7501-400b-96ff-753def1f28d7",
+      "created": "2022-06-09T21:37:08.654288Z",
+      "modified": "2022-06-09T21:37:08.654288Z"
+    },
+    {
+      "name": "Exfiltration via Cyber Means",
+      "description": "Adversaries may exfiltrate ML artifacts or other information relevant to their goals via traditional cyber means.\n\nSee the ATT&CK [Exfiltration](https://attack.mitre.org/tactics/TA0010/) tactic for more information.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "exfiltration"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0025",
+          "external_id": "AML.T0025"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--24030dcf-1da3-41c4-b740-848d8131594c",
+      "created": "2022-06-09T21:37:08.654543Z",
+      "modified": "2022-06-09T21:37:08.654543Z"
+    },
+    {
+      "name": "Denial of ML Service",
+      "description": "Adversaries may target machine learning systems with a flood of requests for the purpose of degrading or shutting down the service.\nSince many machine learning systems require significant amounts of specialized compute, they are often expensive bottlenecks that can become overloaded.\nAdversaries can intentionally craft inputs that require heavy amounts of useless compute from the machine learning system.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "impact"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0029",
+          "external_id": "AML.T0029"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--8494754b-b758-4255-baef-f6b9dc1ee95f",
+      "created": "2022-06-09T21:37:08.654676Z",
+      "modified": "2022-06-09T21:37:08.654676Z"
+    },
+    {
+      "name": "Spamming ML System with Chaff Data",
+      "description": "Adversaries may spam the machine learning system with chaff data that causes increase in the number of detections.\nThis can cause analysts at the victim organization to waste time reviewing and correcting incorrect inferences.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "impact"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0046",
+          "external_id": "AML.T0046"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--807fb147-0e1d-4e37-8f24-6e238d5d5f90",
+      "created": "2022-06-09T21:37:08.654801Z",
+      "modified": "2022-06-09T21:37:08.654801Z"
+    },
+    {
+      "name": "Erode ML Model Integrity",
+      "description": "Adversaries may degrade the target model's performance with adversarial data inputs to erode confidence in the system over time.\nThis can lead to the victim organization wasting time and money both attempting to fix the system and performing the tasks it was meant to automate by hand.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "impact"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0031",
+          "external_id": "AML.T0031"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--48678970-89a2-4493-9b58-f834708c4717",
+      "created": "2022-06-09T21:37:08.654919Z",
+      "modified": "2022-06-09T21:37:08.654919Z"
+    },
+    {
+      "name": "Cost Harvesting",
+      "description": "Adversaries may target different machine learning services to send useless queries or computationally expensive inputs to increase the cost of running services at the victim organization.\nSponge examples are a particular type of adversarial data designed to maximize energy consumption and thus operating cost.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "impact"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0034",
+          "external_id": "AML.T0034"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--64659099-f7f3-4275-93cf-d3d083025830",
+      "created": "2022-06-09T21:37:08.65505Z",
+      "modified": "2022-06-09T21:37:08.65505Z"
+    },
+    {
+      "name": "ML Artifact Collection",
+      "description": "Adversaries may collect ML artifacts for [Exfiltration](/tactics/AML.TA0010) or for use in [ML Attack Staging](/tactics/AML.TA0001).\nML artifacts include models and datasets as well as other telemetry data produced when interacting with a model.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "collection"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0035",
+          "external_id": "AML.T0035"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--9e1d9a82-666c-4d58-9df4-4996eb04bf93",
+      "created": "2022-06-09T21:37:08.655169Z",
+      "modified": "2022-06-09T21:37:08.655169Z"
+    },
+    {
+      "name": "Data from Information Repositories",
+      "description": "Adversaries may leverage information repositories to mine valuable information.\nInformation repositories are tools that allow for storage of information, typically to facilitate collaboration or information sharing between users, and can store a wide variety of data that may aid adversaries in further objectives, or direct access to the target information.\n\nInformation stored in a repository may vary based on the specific instance or environment.\nSpecific common information repositories include Sharepoint, Confluence, and enterprise databases such as SQL Server.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "collection"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0036",
+          "external_id": "AML.T0036"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--3742528c-9ef2-4197-a30a-d0cb5e07d31e",
+      "created": "2022-06-09T21:37:08.655291Z",
+      "modified": "2022-06-09T21:37:08.655291Z"
+    },
+    {
+      "name": "Verify Attack",
+      "description": "Adversaries can verify the efficacy of their attack via an inference API or access to an offline copy of the target model.\nThis gives the adversary confidence that their approach works and allows them to carry out the attack at a later time of their choosing.\nThe adversary may verify the attack once but use it against many edge devices running copies of the target model.\nThe adversary may verify their attack digitally, then deploy it in the [Physical Environment Access](/techniques/AML.T0041) at a later time.\nVerifying the attack may be hard to detect since the adversary can use a minimal number of queries or an offline copy of the model.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "ml-attack-staging"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0042",
+          "external_id": "AML.T0042"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--d95fec57-bf38-4a4a-a85f-e51a7696e011",
+      "created": "2022-06-09T21:37:08.65541Z",
+      "modified": "2022-06-09T21:37:08.65541Z"
+    },
+    {
+      "name": "Craft Adversarial Data",
+      "description": "Adversarial data are inputs to a machine learning model that have been modified such that they cause the adversary's desired effect in the target model.\nEffects can range from misclassification, to missed detections, to maximising energy consumption.\nTypically, the modification is constrained in magnitude or location so that a human still perceives the data as if it were unmodified, but human perceptibility may not always be a concern depending on the adversary's intended effect.\nFor example, an adversarial input for an image classification task is an image the machine learning model would misclassify, but a human would still recognize as containing the correct class.\n\nDepending on the adversary's knowledge of and access to the target model, the adversary may use different classes of algorithms to develop the adversarial example such as [White-Box Optimization](/techniques/AML.T0043.000), [Black-Box Optimization](/techniques/AML.T0043.001), [Black-Box Transfer](/techniques/AML.T0043.002), or [Manual Modification](/techniques/AML.T0043.003).\n\nThe adversary may [Verify Attack](/techniques/AML.T0042) their approach works if they have white-box or inference API access to the model.\nThis allows the adversary to gain confidence their attack is effective \"live\" environment where their attack may be noticed.\nThey can then use the attack at a later time to accomplish their goals.\nAn adversary may optimize adversarial examples for [Evade ML Model](/techniques/AML.T0015), or to [Erode ML Model Integrity](/techniques/AML.T0031).\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "ml-attack-staging"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0043",
+          "external_id": "AML.T0043"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--86121712-ff8a-4e9b-9b8f-398298ce9c86",
+      "created": "2022-06-09T21:37:08.65553Z",
+      "modified": "2022-06-09T21:37:08.65553Z"
+    },
+    {
+      "name": "White-Box Optimization",
+      "description": "In White-Box Optimization, the adversary has full access to the target model and optimizes the adversarial example directly.\nAdversarial examples trained in this manor are most effective against the target model.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "ml-attack-staging"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0043.000",
+          "external_id": "AML.T0043.000"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "x_mitre_is_subtechnique": true,
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--aaf9d7fb-7d3f-4ab7-bdce-bda531fb271c",
+      "created": "2022-06-09T21:37:08.655631Z",
+      "modified": "2022-06-09T21:37:08.655631Z"
+    },
+    {
+      "name": "Black-Box Optimization",
+      "description": "In Black-Box attacks, the adversary has black-box (i.e. [ML Model Inference API Access](/techniques/AML.T0040) via API access) access to the target model.\nWith black-box attacks, the adversary may be using an API that the victim is monitoring.\nThese attacks are generally less effective and require more inferences than [White-Box Optimization](/techniques/AML.T0043.000) attacks, but they require much less access.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "ml-attack-staging"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0043.001",
+          "external_id": "AML.T0043.001"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "x_mitre_is_subtechnique": true,
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--bc1ab19e-db8e-4c56-8fba-61e9334a163b",
+      "created": "2022-06-09T21:37:08.655838Z",
+      "modified": "2022-06-09T21:37:08.655838Z"
+    },
+    {
+      "name": "Black-Box Transfer",
+      "description": "In Black-Box Transfer attacks, the adversary uses one or more proxy models (trained via [Create Proxy ML Model](/techniques/AML.T0005) or [Train Proxy via Replication](/techniques/AML.T0005.001)) models they have full access to and are representative of the target model.\nThe adversary uses [White-Box Optimization](/techniques/AML.T0043.000) on the proxy models to generate adversarial examples.\nIf the set of proxy models are close enough to the target model, the adversarial example should generalize from one to another.\nThis means that an attack that works for the proxy models will likely then work for the target model.\nIf the adversary has [ML Model Inference API Access](/techniques/AML.T0040), they may use this [Verify Attack](/techniques/AML.T0042) that the attack is working and incorporate that information into their training process.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "ml-attack-staging"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0043.002",
+          "external_id": "AML.T0043.002"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "x_mitre_is_subtechnique": true,
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--be8b8bf7-9baf-44ae-a774-707f87e9a0b5",
+      "created": "2022-06-09T21:37:08.656038Z",
+      "modified": "2022-06-09T21:37:08.656038Z"
+    },
+    {
+      "name": "Manual Modification",
+      "description": "Adversaries may manually modify the input data to craft adversarial data.\nThey may use their knowledge of the target model to modify parts of the data they suspect helps the model in performing its task.\nThe adversary may use trial and error until they are able to verify they have a working adversarial input.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "ml-attack-staging"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0043.003",
+          "external_id": "AML.T0043.003"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "x_mitre_is_subtechnique": true,
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--07c252ca-5a2b-4f5b-971c-945829a3cf27",
+      "created": "2022-06-09T21:37:08.65623Z",
+      "modified": "2022-06-09T21:37:08.65623Z"
+    },
+    {
+      "name": "Insert Backdoor Trigger",
+      "description": "The adversary may add a perceptual trigger into inference data.\nThe trigger may be imperceptible or non-obvious to humans.\nThis technique is used in conjunction with [Poison ML Model](/techniques/AML.T0018.000) and allows the adversary to produce their desired effect in the target model.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "ml-attack-staging"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0043.004",
+          "external_id": "AML.T0043.004"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "x_mitre_is_subtechnique": true,
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--5eec024a-6d8c-497b-916d-86124e33364e",
+      "created": "2022-06-09T21:37:08.656424Z",
+      "modified": "2022-06-09T21:37:08.656424Z"
+    },
+    {
+      "name": "ML Intellectual Property Theft",
+      "description": "Adversaries may exfiltrate ML artifacts to steal intellectual property and cause economic harm to the victim organization.\n\nProprietary training data is costly to collect and annotate and may be a target for [Exfiltration](/tactics/AML.TA0010) and theft.\n\nMLaaS providers charge for use of their API.\nAn adversary who has stolen a model via [Exfiltration](/tactics/AML.TA0010) or via [Extract ML Model](/techniques/AML.T0024.002) now has unlimited use of that service without paying the owner of the intellectual property.\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-atlas",
+          "phase_name": "impact"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org/techniques/AML.T0045",
+          "external_id": "AML.T0045"
+        }
+      ],
+      "x_mitre_platforms": [
+        "ATLAS"
+      ],
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--2d01e6a0-7317-44e1-abe9-e64897bd0f0a",
+      "created": "2022-06-09T21:37:08.656666Z",
+      "modified": "2022-06-09T21:37:08.656666Z"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--bed0c642-ff75-403c-8a40-7f070604dc53",
+      "created": "2022-06-09T21:37:08.646636Z",
+      "modified": "2022-06-09T21:37:08.646636Z",
+      "source_ref": "attack-pattern--9cacdb12-e61b-41b3-b64f-ccc9a06bfc9a",
+      "relationship_type": "subtechnique-of",
+      "target_ref": "attack-pattern--3f7f850c-69fb-40e8-9595-0e8295d96d8d"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--2f55559f-cc7c-4170-ad5e-d3d5732a1e63",
+      "created": "2022-06-09T21:37:08.64713Z",
+      "modified": "2022-06-09T21:37:08.64713Z",
+      "source_ref": "attack-pattern--2136b777-15f9-432a-b0f9-c36b11067b22",
+      "relationship_type": "subtechnique-of",
+      "target_ref": "attack-pattern--3f7f850c-69fb-40e8-9595-0e8295d96d8d"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--7132ca64-685b-4cc4-9f6e-7437f3fcf0a8",
+      "created": "2022-06-09T21:37:08.647338Z",
+      "modified": "2022-06-09T21:37:08.647338Z",
+      "source_ref": "attack-pattern--63ed08b8-32b8-4b2d-9f44-02be2e6ad7c9",
+      "relationship_type": "subtechnique-of",
+      "target_ref": "attack-pattern--3f7f850c-69fb-40e8-9595-0e8295d96d8d"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b0555407-072e-4121-a388-a2f59b89ed0a",
+      "created": "2022-06-09T21:37:08.648198Z",
+      "modified": "2022-06-09T21:37:08.648198Z",
+      "source_ref": "attack-pattern--f3388cbf-7745-4cc0-84d6-202adb14c7cb",
+      "relationship_type": "subtechnique-of",
+      "target_ref": "attack-pattern--2c333d27-4d3e-4af3-96ff-ef6fd90999da"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--bd3c611c-b340-40b6-8275-f6301398fe97",
+      "created": "2022-06-09T21:37:08.648395Z",
+      "modified": "2022-06-09T21:37:08.648395Z",
+      "source_ref": "attack-pattern--07cd92eb-74e3-4594-8b3b-aa2ea3b2bd2b",
+      "relationship_type": "subtechnique-of",
+      "target_ref": "attack-pattern--2c333d27-4d3e-4af3-96ff-ef6fd90999da"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--594b7c53-2154-48ba-a882-14d39858afa2",
+      "created": "2022-06-09T21:37:08.648708Z",
+      "modified": "2022-06-09T21:37:08.648708Z",
+      "source_ref": "attack-pattern--47a7aaac-bab1-41d2-88c1-df7307676f6a",
+      "relationship_type": "subtechnique-of",
+      "target_ref": "attack-pattern--f847ecea-ca40-4e1a-955e-8144dcced884"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--1b19b1e9-94dc-4a8e-9574-bb562c9f1414",
+      "created": "2022-06-09T21:37:08.648899Z",
+      "modified": "2022-06-09T21:37:08.648899Z",
+      "source_ref": "attack-pattern--8446e625-c96b-43a9-95ab-aaa82c48a97a",
+      "relationship_type": "subtechnique-of",
+      "target_ref": "attack-pattern--f847ecea-ca40-4e1a-955e-8144dcced884"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ba1182d2-af8a-42cb-a75d-fd024f9de91a",
+      "created": "2022-06-09T21:37:08.649339Z",
+      "modified": "2022-06-09T21:37:08.649339Z",
+      "source_ref": "attack-pattern--4dc9414d-121a-4a2a-a550-bfeb2447e797",
+      "relationship_type": "subtechnique-of",
+      "target_ref": "attack-pattern--81793dd5-0f77-461a-9d4c-e65ae4a46023"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--944a15bb-fb8c-49c1-aa81-07ac4129b479",
+      "created": "2022-06-09T21:37:08.649534Z",
+      "modified": "2022-06-09T21:37:08.649534Z",
+      "source_ref": "attack-pattern--7df36a3b-c8da-4bbd-a6bf-27c8c27e7e63",
+      "relationship_type": "subtechnique-of",
+      "target_ref": "attack-pattern--81793dd5-0f77-461a-9d4c-e65ae4a46023"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--2f87ec3d-b92d-4d7f-ac70-a6766b5de25d",
+      "created": "2022-06-09T21:37:08.649965Z",
+      "modified": "2022-06-09T21:37:08.649965Z",
+      "source_ref": "attack-pattern--4b039ffc-1814-4f0f-9441-2b816be0da36",
+      "relationship_type": "subtechnique-of",
+      "target_ref": "attack-pattern--7361e80d-e3e7-4e08-b93a-b7d17c3c6a52"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--40a53e10-0214-41a6-8d30-dd73851ccc08",
+      "created": "2022-06-09T21:37:08.650159Z",
+      "modified": "2022-06-09T21:37:08.650159Z",
+      "source_ref": "attack-pattern--88bc1a30-b74e-41de-8c44-5c11bc7eb7f2",
+      "relationship_type": "subtechnique-of",
+      "target_ref": "attack-pattern--7361e80d-e3e7-4e08-b93a-b7d17c3c6a52"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c1874e1a-11ca-4d7d-894e-1ca931933a25",
+      "created": "2022-06-09T21:37:08.650353Z",
+      "modified": "2022-06-09T21:37:08.650353Z",
+      "source_ref": "attack-pattern--da3a337f-ffd1-43c0-95ed-554eb66b3fbd",
+      "relationship_type": "subtechnique-of",
+      "target_ref": "attack-pattern--7361e80d-e3e7-4e08-b93a-b7d17c3c6a52"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ed353a4d-3a53-42bd-97f9-bc5a9a16239f",
+      "created": "2022-06-09T21:37:08.650547Z",
+      "modified": "2022-06-09T21:37:08.650547Z",
+      "source_ref": "attack-pattern--62bf9e85-ee34-4bc8-902c-3306760a9d50",
+      "relationship_type": "subtechnique-of",
+      "target_ref": "attack-pattern--7361e80d-e3e7-4e08-b93a-b7d17c3c6a52"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--0e5f6f7b-a2d0-4427-9264-4d3529796339",
+      "created": "2022-06-09T21:37:08.651931Z",
+      "modified": "2022-06-09T21:37:08.651931Z",
+      "source_ref": "attack-pattern--7af86ed8-a074-4ddc-ba57-d6d6810806e6",
+      "relationship_type": "subtechnique-of",
+      "target_ref": "attack-pattern--962faff5-9636-43bf-bed9-f76fa1c83f17"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--6dfd98e1-026b-46c0-8876-b3f3ae4d1eb6",
+      "created": "2022-06-09T21:37:08.652126Z",
+      "modified": "2022-06-09T21:37:08.652126Z",
+      "source_ref": "attack-pattern--0c9aaa46-c2e7-4c98-9a9e-81e5ec236b52",
+      "relationship_type": "subtechnique-of",
+      "target_ref": "attack-pattern--962faff5-9636-43bf-bed9-f76fa1c83f17"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ca518043-9d93-46d3-a0a5-776ef4d21101",
+      "created": "2022-06-09T21:37:08.652331Z",
+      "modified": "2022-06-09T21:37:08.652331Z",
+      "source_ref": "attack-pattern--7b226ce0-cf6a-4a95-9baf-6b0a29055599",
+      "relationship_type": "subtechnique-of",
+      "target_ref": "attack-pattern--962faff5-9636-43bf-bed9-f76fa1c83f17"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--620f4234-6604-428d-948e-a7c614384e2d",
+      "created": "2022-06-09T21:37:08.652817Z",
+      "modified": "2022-06-09T21:37:08.652817Z",
+      "source_ref": "attack-pattern--9eb18369-63a4-474e-b3f0-ecf659738aed",
+      "relationship_type": "subtechnique-of",
+      "target_ref": "attack-pattern--ee9244a3-13b3-4422-ac2e-de0cef7eb889"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--f29cdb37-e744-4323-8c86-6f51879746c3",
+      "created": "2022-06-09T21:37:08.653432Z",
+      "modified": "2022-06-09T21:37:08.653432Z",
+      "source_ref": "attack-pattern--98490c87-fb42-4503-b45b-1015ef82d944",
+      "relationship_type": "subtechnique-of",
+      "target_ref": "attack-pattern--03763c4f-dbec-465a-9d54-8b929f55a3a6"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--168b9817-717f-43b9-9511-d2cfdde0237f",
+      "created": "2022-06-09T21:37:08.653637Z",
+      "modified": "2022-06-09T21:37:08.653637Z",
+      "source_ref": "attack-pattern--7fdf0e9e-6e00-4797-91c0-42a6fd869439",
+      "relationship_type": "subtechnique-of",
+      "target_ref": "attack-pattern--03763c4f-dbec-465a-9d54-8b929f55a3a6"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c0fd6a6d-b4eb-46e0-b2e2-b1a9245d5881",
+      "created": "2022-06-09T21:37:08.653971Z",
+      "modified": "2022-06-09T21:37:08.653971Z",
+      "source_ref": "attack-pattern--172c7ac0-7d68-4301-9805-360b67aed970",
+      "relationship_type": "subtechnique-of",
+      "target_ref": "attack-pattern--0be218da-ed7b-4663-902c-49a5296ef1ae"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--82a3a707-7ee6-40fe-ad9e-f7a2c06eb49f",
+      "created": "2022-06-09T21:37:08.654175Z",
+      "modified": "2022-06-09T21:37:08.654175Z",
+      "source_ref": "attack-pattern--5f27846e-2eff-45eb-95a1-a4b0649a79b8",
+      "relationship_type": "subtechnique-of",
+      "target_ref": "attack-pattern--0be218da-ed7b-4663-902c-49a5296ef1ae"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--7d0a3059-eb38-4e4a-bad9-25df948e95f4",
+      "created": "2022-06-09T21:37:08.654413Z",
+      "modified": "2022-06-09T21:37:08.654413Z",
+      "source_ref": "attack-pattern--19825582-7501-400b-96ff-753def1f28d7",
+      "relationship_type": "subtechnique-of",
+      "target_ref": "attack-pattern--0be218da-ed7b-4663-902c-49a5296ef1ae"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--f76a4e23-46f9-4ed6-a3a4-de050bd4c766",
+      "created": "2022-06-09T21:37:08.655711Z",
+      "modified": "2022-06-09T21:37:08.655711Z",
+      "source_ref": "attack-pattern--aaf9d7fb-7d3f-4ab7-bdce-bda531fb271c",
+      "relationship_type": "subtechnique-of",
+      "target_ref": "attack-pattern--86121712-ff8a-4e9b-9b8f-398298ce9c86"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--2e86c74b-dd3b-4906-9021-74b88d406ed0",
+      "created": "2022-06-09T21:37:08.655926Z",
+      "modified": "2022-06-09T21:37:08.655926Z",
+      "source_ref": "attack-pattern--bc1ab19e-db8e-4c56-8fba-61e9334a163b",
+      "relationship_type": "subtechnique-of",
+      "target_ref": "attack-pattern--86121712-ff8a-4e9b-9b8f-398298ce9c86"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--1121cdb0-3b66-4401-8737-755f0c903f35",
+      "created": "2022-06-09T21:37:08.65612Z",
+      "modified": "2022-06-09T21:37:08.65612Z",
+      "source_ref": "attack-pattern--be8b8bf7-9baf-44ae-a774-707f87e9a0b5",
+      "relationship_type": "subtechnique-of",
+      "target_ref": "attack-pattern--86121712-ff8a-4e9b-9b8f-398298ce9c86"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ada26bb9-defe-4d28-8433-1c786848dab4",
+      "created": "2022-06-09T21:37:08.65631Z",
+      "modified": "2022-06-09T21:37:08.65631Z",
+      "source_ref": "attack-pattern--07c252ca-5a2b-4f5b-971c-945829a3cf27",
+      "relationship_type": "subtechnique-of",
+      "target_ref": "attack-pattern--86121712-ff8a-4e9b-9b8f-398298ce9c86"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--aa3fbb6e-d12d-49ef-ac16-abad4d393e20",
+      "created": "2022-06-09T21:37:08.656506Z",
+      "modified": "2022-06-09T21:37:08.656506Z",
+      "source_ref": "attack-pattern--5eec024a-6d8c-497b-916d-86124e33364e",
+      "relationship_type": "subtechnique-of",
+      "target_ref": "attack-pattern--86121712-ff8a-4e9b-9b8f-398298ce9c86"
+    },
+    {
+      "name": "ATLAS Machine Learning Threat Matrix",
+      "description": "ATLAS matrix for ATLAS Machine Learning Threat Matrix",
+      "external_references": [
+        {
+          "source_name": "mitre-atlas",
+          "url": "https://atlas.mitre.org",
+          "external_id": "mitre-atlas"
+        }
+      ],
+      "tactic_refs": [
+        "x-mitre-tactic--5e2f793f-24dd-4a9b-bd70-aab6e8919b6e",
+        "x-mitre-tactic--42820f7b-6fd7-496a-98f2-c56d20f1f887",
+        "x-mitre-tactic--996369b1-e754-4f58-af87-8d5aa1d80667",
+        "x-mitre-tactic--187e83c7-7a29-417b-aed1-7f1e89adc9cb",
+        "x-mitre-tactic--5e856d48-61e3-4a8a-bde9-5da4a3e66aac",
+        "x-mitre-tactic--9f662976-9ebf-42d0-ae9b-c6a1c452a261",
+        "x-mitre-tactic--e2383fc8-4f73-4970-b151-d72903b99464",
+        "x-mitre-tactic--04d2f6a7-fca2-4a0b-9f52-1ca2fedc1317",
+        "x-mitre-tactic--53e5e71c-344d-4ac7-a138-da6bb460f23a",
+        "x-mitre-tactic--ae4aa8b0-9aa9-40eb-9782-8f0a48ff2dcf",
+        "x-mitre-tactic--6f1d931c-c4a5-420f-a8f4-957b5f05d6c6",
+        "x-mitre-tactic--5510b387-7159-4d3c-ac10-a6fa85808d4c"
+      ],
+      "type": "x-mitre-matrix",
+      "spec_version": "2.1",
+      "id": "x-mitre-matrix--b8d8463f-30ed-4be0-8453-79dc978a988c",
+      "created": "2022-06-09T21:37:08.658213Z",
+      "modified": "2022-06-09T21:37:08.658213Z"
+    },
+    {
+      "type": "x-mitre-collection",
+      "name": "ATLAS",
+      "description": "Adversarial Threat Landscape for AI Systems",
+      "created": "2022-06-09T21:37:08.658298Z",
+      "modified": "2022-06-09T21:37:08.658298Z",
+      "spec_version": "2.1",
+      "x_mitre_version": "0.1",
+      "x_mitre_attack_spec_version": "2.1.0",
+      "created_by_ref": "identity--01ff6199-5dd4-454e-ae60-44ec2c5b66b8",
+      "x_mitre_contents": [
+        {
+          "object_ref": "x-mitre-tactic--5e2f793f-24dd-4a9b-bd70-aab6e8919b6e",
+          "object_modified": "2022-06-09T21:37:08.656812Z"
+        },
+        {
+          "object_ref": "x-mitre-tactic--42820f7b-6fd7-496a-98f2-c56d20f1f887",
+          "object_modified": "2022-06-09T21:37:08.656922Z"
+        },
+        {
+          "object_ref": "x-mitre-tactic--996369b1-e754-4f58-af87-8d5aa1d80667",
+          "object_modified": "2022-06-09T21:37:08.657022Z"
+        },
+        {
+          "object_ref": "x-mitre-tactic--187e83c7-7a29-417b-aed1-7f1e89adc9cb",
+          "object_modified": "2022-06-09T21:37:08.657118Z"
+        },
+        {
+          "object_ref": "x-mitre-tactic--5e856d48-61e3-4a8a-bde9-5da4a3e66aac",
+          "object_modified": "2022-06-09T21:37:08.657243Z"
+        },
+        {
+          "object_ref": "x-mitre-tactic--9f662976-9ebf-42d0-ae9b-c6a1c452a261",
+          "object_modified": "2022-06-09T21:37:08.657342Z"
+        },
+        {
+          "object_ref": "x-mitre-tactic--e2383fc8-4f73-4970-b151-d72903b99464",
+          "object_modified": "2022-06-09T21:37:08.657497Z"
+        },
+        {
+          "object_ref": "x-mitre-tactic--04d2f6a7-fca2-4a0b-9f52-1ca2fedc1317",
+          "object_modified": "2022-06-09T21:37:08.657687Z"
+        },
+        {
+          "object_ref": "x-mitre-tactic--53e5e71c-344d-4ac7-a138-da6bb460f23a",
+          "object_modified": "2022-06-09T21:37:08.657793Z"
+        },
+        {
+          "object_ref": "x-mitre-tactic--ae4aa8b0-9aa9-40eb-9782-8f0a48ff2dcf",
+          "object_modified": "2022-06-09T21:37:08.657894Z"
+        },
+        {
+          "object_ref": "x-mitre-tactic--6f1d931c-c4a5-420f-a8f4-957b5f05d6c6",
+          "object_modified": "2022-06-09T21:37:08.657994Z"
+        },
+        {
+          "object_ref": "x-mitre-tactic--5510b387-7159-4d3c-ac10-a6fa85808d4c",
+          "object_modified": "2022-06-09T21:37:08.658091Z"
+        },
+        {
+          "object_ref": "attack-pattern--3f7f850c-69fb-40e8-9595-0e8295d96d8d",
+          "object_modified": "2022-06-09T21:37:08.646207Z"
+        },
+        {
+          "object_ref": "attack-pattern--9cacdb12-e61b-41b3-b64f-ccc9a06bfc9a",
+          "object_modified": "2022-06-09T21:37:08.646533Z"
+        },
+        {
+          "object_ref": "attack-pattern--2136b777-15f9-432a-b0f9-c36b11067b22",
+          "object_modified": "2022-06-09T21:37:08.647035Z"
+        },
+        {
+          "object_ref": "attack-pattern--63ed08b8-32b8-4b2d-9f44-02be2e6ad7c9",
+          "object_modified": "2022-06-09T21:37:08.647253Z"
+        },
+        {
+          "object_ref": "attack-pattern--b8c96324-9373-49b2-8138-a474a391e9da",
+          "object_modified": "2022-06-09T21:37:08.647469Z"
+        },
+        {
+          "object_ref": "attack-pattern--aa970751-1d2f-4c04-9c1a-599f91452fc8",
+          "object_modified": "2022-06-09T21:37:08.647591Z"
+        },
+        {
+          "object_ref": "attack-pattern--b8f579a4-4036-425e-8144-6cf9c0f27624",
+          "object_modified": "2022-06-09T21:37:08.647713Z"
+        },
+        {
+          "object_ref": "attack-pattern--11ec0628-6816-49bf-9155-5ccccf273d70",
+          "object_modified": "2022-06-09T21:37:08.647833Z"
+        },
+        {
+          "object_ref": "attack-pattern--2c333d27-4d3e-4af3-96ff-ef6fd90999da",
+          "object_modified": "2022-06-09T21:37:08.647954Z"
+        },
+        {
+          "object_ref": "attack-pattern--f3388cbf-7745-4cc0-84d6-202adb14c7cb",
+          "object_modified": "2022-06-09T21:37:08.648107Z"
+        },
+        {
+          "object_ref": "attack-pattern--07cd92eb-74e3-4594-8b3b-aa2ea3b2bd2b",
+          "object_modified": "2022-06-09T21:37:08.648312Z"
+        },
+        {
+          "object_ref": "attack-pattern--f847ecea-ca40-4e1a-955e-8144dcced884",
+          "object_modified": "2022-06-09T21:37:08.648524Z"
+        },
+        {
+          "object_ref": "attack-pattern--47a7aaac-bab1-41d2-88c1-df7307676f6a",
+          "object_modified": "2022-06-09T21:37:08.648628Z"
+        },
+        {
+          "object_ref": "attack-pattern--8446e625-c96b-43a9-95ab-aaa82c48a97a",
+          "object_modified": "2022-06-09T21:37:08.648818Z"
+        },
+        {
+          "object_ref": "attack-pattern--093212ac-a70d-4fff-8102-402581e8dd8d",
+          "object_modified": "2022-06-09T21:37:08.649029Z"
+        },
+        {
+          "object_ref": "attack-pattern--81793dd5-0f77-461a-9d4c-e65ae4a46023",
+          "object_modified": "2022-06-09T21:37:08.649151Z"
+        },
+        {
+          "object_ref": "attack-pattern--4dc9414d-121a-4a2a-a550-bfeb2447e797",
+          "object_modified": "2022-06-09T21:37:08.649254Z"
+        },
+        {
+          "object_ref": "attack-pattern--7df36a3b-c8da-4bbd-a6bf-27c8c27e7e63",
+          "object_modified": "2022-06-09T21:37:08.649452Z"
+        },
+        {
+          "object_ref": "attack-pattern--d01ff63a-6456-4ba0-a1ab-56ac2da210e5",
+          "object_modified": "2022-06-09T21:37:08.64966Z"
+        },
+        {
+          "object_ref": "attack-pattern--7361e80d-e3e7-4e08-b93a-b7d17c3c6a52",
+          "object_modified": "2022-06-09T21:37:08.649781Z"
+        },
+        {
+          "object_ref": "attack-pattern--4b039ffc-1814-4f0f-9441-2b816be0da36",
+          "object_modified": "2022-06-09T21:37:08.649885Z"
+        },
+        {
+          "object_ref": "attack-pattern--88bc1a30-b74e-41de-8c44-5c11bc7eb7f2",
+          "object_modified": "2022-06-09T21:37:08.650077Z"
+        },
+        {
+          "object_ref": "attack-pattern--da3a337f-ffd1-43c0-95ed-554eb66b3fbd",
+          "object_modified": "2022-06-09T21:37:08.650272Z"
+        },
+        {
+          "object_ref": "attack-pattern--62bf9e85-ee34-4bc8-902c-3306760a9d50",
+          "object_modified": "2022-06-09T21:37:08.650462Z"
+        },
+        {
+          "object_ref": "attack-pattern--c38caf1a-a657-43d1-a40a-fd34fafbead3",
+          "object_modified": "2022-06-09T21:37:08.650675Z"
+        },
+        {
+          "object_ref": "attack-pattern--f87b9567-39b7-49cf-9d57-db1f60663027",
+          "object_modified": "2022-06-09T21:37:08.650796Z"
+        },
+        {
+          "object_ref": "attack-pattern--f021f106-7616-4d35-a688-2e09354bed6c",
+          "object_modified": "2022-06-09T21:37:08.650915Z"
+        },
+        {
+          "object_ref": "attack-pattern--fe26acd8-f05b-4ce0-89f2-8194831db098",
+          "object_modified": "2022-06-09T21:37:08.651032Z"
+        },
+        {
+          "object_ref": "attack-pattern--bb48fe01-f47d-43b0-85e9-73205b5c99cf",
+          "object_modified": "2022-06-09T21:37:08.651183Z"
+        },
+        {
+          "object_ref": "attack-pattern--171c4ee1-5ff4-4470-8cc8-0eaabbb7632d",
+          "object_modified": "2022-06-09T21:37:08.651301Z"
+        },
+        {
+          "object_ref": "attack-pattern--b177ba40-3538-48f2-9dc2-e87ef9babb9e",
+          "object_modified": "2022-06-09T21:37:08.651481Z"
+        },
+        {
+          "object_ref": "attack-pattern--77f607a9-928e-48b3-8e64-8a366e38fae9",
+          "object_modified": "2022-06-09T21:37:08.651617Z"
+        },
+        {
+          "object_ref": "attack-pattern--962faff5-9636-43bf-bed9-f76fa1c83f17",
+          "object_modified": "2022-06-09T21:37:08.651736Z"
+        },
+        {
+          "object_ref": "attack-pattern--7af86ed8-a074-4ddc-ba57-d6d6810806e6",
+          "object_modified": "2022-06-09T21:37:08.651842Z"
+        },
+        {
+          "object_ref": "attack-pattern--0c9aaa46-c2e7-4c98-9a9e-81e5ec236b52",
+          "object_modified": "2022-06-09T21:37:08.652046Z"
+        },
+        {
+          "object_ref": "attack-pattern--7b226ce0-cf6a-4a95-9baf-6b0a29055599",
+          "object_modified": "2022-06-09T21:37:08.652249Z"
+        },
+        {
+          "object_ref": "attack-pattern--e007868f-4f69-4243-939c-0d948a52d2df",
+          "object_modified": "2022-06-09T21:37:08.652497Z"
+        },
+        {
+          "object_ref": "attack-pattern--ee9244a3-13b3-4422-ac2e-de0cef7eb889",
+          "object_modified": "2022-06-09T21:37:08.652622Z"
+        },
+        {
+          "object_ref": "attack-pattern--9eb18369-63a4-474e-b3f0-ecf659738aed",
+          "object_modified": "2022-06-09T21:37:08.65273Z"
+        },
+        {
+          "object_ref": "attack-pattern--c9178add-be85-487f-a7ab-d2bbf5e69408",
+          "object_modified": "2022-06-09T21:37:08.652949Z"
+        },
+        {
+          "object_ref": "attack-pattern--f4ed7571-4105-4fa0-bdc6-64e298d5c4d3",
+          "object_modified": "2022-06-09T21:37:08.653097Z"
+        },
+        {
+          "object_ref": "attack-pattern--03763c4f-dbec-465a-9d54-8b929f55a3a6",
+          "object_modified": "2022-06-09T21:37:08.653242Z"
+        },
+        {
+          "object_ref": "attack-pattern--98490c87-fb42-4503-b45b-1015ef82d944",
+          "object_modified": "2022-06-09T21:37:08.653345Z"
+        },
+        {
+          "object_ref": "attack-pattern--7fdf0e9e-6e00-4797-91c0-42a6fd869439",
+          "object_modified": "2022-06-09T21:37:08.653556Z"
+        },
+        {
+          "object_ref": "attack-pattern--0be218da-ed7b-4663-902c-49a5296ef1ae",
+          "object_modified": "2022-06-09T21:37:08.653773Z"
+        },
+        {
+          "object_ref": "attack-pattern--172c7ac0-7d68-4301-9805-360b67aed970",
+          "object_modified": "2022-06-09T21:37:08.653886Z"
+        },
+        {
+          "object_ref": "attack-pattern--5f27846e-2eff-45eb-95a1-a4b0649a79b8",
+          "object_modified": "2022-06-09T21:37:08.654091Z"
+        },
+        {
+          "object_ref": "attack-pattern--19825582-7501-400b-96ff-753def1f28d7",
+          "object_modified": "2022-06-09T21:37:08.654288Z"
+        },
+        {
+          "object_ref": "attack-pattern--24030dcf-1da3-41c4-b740-848d8131594c",
+          "object_modified": "2022-06-09T21:37:08.654543Z"
+        },
+        {
+          "object_ref": "attack-pattern--8494754b-b758-4255-baef-f6b9dc1ee95f",
+          "object_modified": "2022-06-09T21:37:08.654676Z"
+        },
+        {
+          "object_ref": "attack-pattern--807fb147-0e1d-4e37-8f24-6e238d5d5f90",
+          "object_modified": "2022-06-09T21:37:08.654801Z"
+        },
+        {
+          "object_ref": "attack-pattern--48678970-89a2-4493-9b58-f834708c4717",
+          "object_modified": "2022-06-09T21:37:08.654919Z"
+        },
+        {
+          "object_ref": "attack-pattern--64659099-f7f3-4275-93cf-d3d083025830",
+          "object_modified": "2022-06-09T21:37:08.65505Z"
+        },
+        {
+          "object_ref": "attack-pattern--9e1d9a82-666c-4d58-9df4-4996eb04bf93",
+          "object_modified": "2022-06-09T21:37:08.655169Z"
+        },
+        {
+          "object_ref": "attack-pattern--3742528c-9ef2-4197-a30a-d0cb5e07d31e",
+          "object_modified": "2022-06-09T21:37:08.655291Z"
+        },
+        {
+          "object_ref": "attack-pattern--d95fec57-bf38-4a4a-a85f-e51a7696e011",
+          "object_modified": "2022-06-09T21:37:08.65541Z"
+        },
+        {
+          "object_ref": "attack-pattern--86121712-ff8a-4e9b-9b8f-398298ce9c86",
+          "object_modified": "2022-06-09T21:37:08.65553Z"
+        },
+        {
+          "object_ref": "attack-pattern--aaf9d7fb-7d3f-4ab7-bdce-bda531fb271c",
+          "object_modified": "2022-06-09T21:37:08.655631Z"
+        },
+        {
+          "object_ref": "attack-pattern--bc1ab19e-db8e-4c56-8fba-61e9334a163b",
+          "object_modified": "2022-06-09T21:37:08.655838Z"
+        },
+        {
+          "object_ref": "attack-pattern--be8b8bf7-9baf-44ae-a774-707f87e9a0b5",
+          "object_modified": "2022-06-09T21:37:08.656038Z"
+        },
+        {
+          "object_ref": "attack-pattern--07c252ca-5a2b-4f5b-971c-945829a3cf27",
+          "object_modified": "2022-06-09T21:37:08.65623Z"
+        },
+        {
+          "object_ref": "attack-pattern--5eec024a-6d8c-497b-916d-86124e33364e",
+          "object_modified": "2022-06-09T21:37:08.656424Z"
+        },
+        {
+          "object_ref": "attack-pattern--2d01e6a0-7317-44e1-abe9-e64897bd0f0a",
+          "object_modified": "2022-06-09T21:37:08.656666Z"
+        },
+        {
+          "object_ref": "relationship--bed0c642-ff75-403c-8a40-7f070604dc53",
+          "object_modified": "2022-06-09T21:37:08.646636Z"
+        },
+        {
+          "object_ref": "relationship--2f55559f-cc7c-4170-ad5e-d3d5732a1e63",
+          "object_modified": "2022-06-09T21:37:08.64713Z"
+        },
+        {
+          "object_ref": "relationship--7132ca64-685b-4cc4-9f6e-7437f3fcf0a8",
+          "object_modified": "2022-06-09T21:37:08.647338Z"
+        },
+        {
+          "object_ref": "relationship--b0555407-072e-4121-a388-a2f59b89ed0a",
+          "object_modified": "2022-06-09T21:37:08.648198Z"
+        },
+        {
+          "object_ref": "relationship--bd3c611c-b340-40b6-8275-f6301398fe97",
+          "object_modified": "2022-06-09T21:37:08.648395Z"
+        },
+        {
+          "object_ref": "relationship--594b7c53-2154-48ba-a882-14d39858afa2",
+          "object_modified": "2022-06-09T21:37:08.648708Z"
+        },
+        {
+          "object_ref": "relationship--1b19b1e9-94dc-4a8e-9574-bb562c9f1414",
+          "object_modified": "2022-06-09T21:37:08.648899Z"
+        },
+        {
+          "object_ref": "relationship--ba1182d2-af8a-42cb-a75d-fd024f9de91a",
+          "object_modified": "2022-06-09T21:37:08.649339Z"
+        },
+        {
+          "object_ref": "relationship--944a15bb-fb8c-49c1-aa81-07ac4129b479",
+          "object_modified": "2022-06-09T21:37:08.649534Z"
+        },
+        {
+          "object_ref": "relationship--2f87ec3d-b92d-4d7f-ac70-a6766b5de25d",
+          "object_modified": "2022-06-09T21:37:08.649965Z"
+        },
+        {
+          "object_ref": "relationship--40a53e10-0214-41a6-8d30-dd73851ccc08",
+          "object_modified": "2022-06-09T21:37:08.650159Z"
+        },
+        {
+          "object_ref": "relationship--c1874e1a-11ca-4d7d-894e-1ca931933a25",
+          "object_modified": "2022-06-09T21:37:08.650353Z"
+        },
+        {
+          "object_ref": "relationship--ed353a4d-3a53-42bd-97f9-bc5a9a16239f",
+          "object_modified": "2022-06-09T21:37:08.650547Z"
+        },
+        {
+          "object_ref": "relationship--0e5f6f7b-a2d0-4427-9264-4d3529796339",
+          "object_modified": "2022-06-09T21:37:08.651931Z"
+        },
+        {
+          "object_ref": "relationship--6dfd98e1-026b-46c0-8876-b3f3ae4d1eb6",
+          "object_modified": "2022-06-09T21:37:08.652126Z"
+        },
+        {
+          "object_ref": "relationship--ca518043-9d93-46d3-a0a5-776ef4d21101",
+          "object_modified": "2022-06-09T21:37:08.652331Z"
+        },
+        {
+          "object_ref": "relationship--620f4234-6604-428d-948e-a7c614384e2d",
+          "object_modified": "2022-06-09T21:37:08.652817Z"
+        },
+        {
+          "object_ref": "relationship--f29cdb37-e744-4323-8c86-6f51879746c3",
+          "object_modified": "2022-06-09T21:37:08.653432Z"
+        },
+        {
+          "object_ref": "relationship--168b9817-717f-43b9-9511-d2cfdde0237f",
+          "object_modified": "2022-06-09T21:37:08.653637Z"
+        },
+        {
+          "object_ref": "relationship--c0fd6a6d-b4eb-46e0-b2e2-b1a9245d5881",
+          "object_modified": "2022-06-09T21:37:08.653971Z"
+        },
+        {
+          "object_ref": "relationship--82a3a707-7ee6-40fe-ad9e-f7a2c06eb49f",
+          "object_modified": "2022-06-09T21:37:08.654175Z"
+        },
+        {
+          "object_ref": "relationship--7d0a3059-eb38-4e4a-bad9-25df948e95f4",
+          "object_modified": "2022-06-09T21:37:08.654413Z"
+        },
+        {
+          "object_ref": "relationship--f76a4e23-46f9-4ed6-a3a4-de050bd4c766",
+          "object_modified": "2022-06-09T21:37:08.655711Z"
+        },
+        {
+          "object_ref": "relationship--2e86c74b-dd3b-4906-9021-74b88d406ed0",
+          "object_modified": "2022-06-09T21:37:08.655926Z"
+        },
+        {
+          "object_ref": "relationship--1121cdb0-3b66-4401-8737-755f0c903f35",
+          "object_modified": "2022-06-09T21:37:08.65612Z"
+        },
+        {
+          "object_ref": "relationship--ada26bb9-defe-4d28-8433-1c786848dab4",
+          "object_modified": "2022-06-09T21:37:08.65631Z"
+        },
+        {
+          "object_ref": "relationship--aa3fbb6e-d12d-49ef-ac16-abad4d393e20",
+          "object_modified": "2022-06-09T21:37:08.656506Z"
+        },
+        {
+          "object_ref": "x-mitre-matrix--b8d8463f-30ed-4be0-8453-79dc978a988c",
+          "object_modified": "2022-06-09T21:37:08.658213Z"
+        }
+      ],
+      "id": "x-mitre-collection--28c79969-9097-4b0d-9b78-232f3a35bb69"
+    }
+  ],
+  "type": "bundle",
+  "id": "bundle--aaf31b0e-804c-42a4-8539-2ff6bbac6265"
+}
