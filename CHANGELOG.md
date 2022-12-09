@@ -8,6 +8,33 @@
     This will patch the version number appropriately and create the correct tag on the current commit.
     The creation of the tag can be disabled with the --no-git-tag-version if desired.
 -->
+# 4.7.1 - 8 November 2022
+
+Adds support for ATT&CK v12.1.
+
+# 4.7.0 - 25 October 2022
+
+Adds support for ATT&CK v12.
+
+## New Features
+- Integration compatibility with the [ATT&CK Workbench](https://github.com/center-for-threat-informed-defense/attack-workbench-frontend). See issue [#474](https://github.com/mitre-attack/attack-navigator/pull/474).
+- Extended search interface to support searching for techniques based on campaign. See [#501](https://github.com/mitre-attack/attack-navigator/issues/501).
+
+## Fixes
+- Fixed an issue with the Docker build caused by conflicting peer dependencies. See issue [#497](https://github.com/mitre-attack/attack-navigator/issues/497).
+- Fixed an issue with loading STIX bundles that do not contain all of the tactics referenced by the included matrix. See issue [#489](https://github.com/mitre-attack/attack-navigator/issues/489).
+
+# v4.6.6 - 26 August 2022
+
+## Fixes
+- Fixed an issue where the sorting selection was not honored for sub-techniques when rendered as an SVG. See issue [#494](https://github.com/mitre-attack/attack-navigator/issues/494).
+
+# v4.6.5 - 7 July 2022
+
+Adds support for ATT&CK v11.3 and Mobile ATT&CK sub-techniques.
+
+## Fixes
+- Fixed an issue where matrices that have been deprecated would load into the Navigator. See issue [#473](https://github.com/mitre-attack/attack-navigator/issues/473).
 
 # v4.6.4 - 25 May 2022
 

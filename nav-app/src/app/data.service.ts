@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
-import { Observable } from "rxjs/Rx"
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Buffer } from 'buffer';
+import { Observable } from "rxjs/Rx";
 import { fromPromise } from 'rxjs/observable/fromPromise';
 import { TaxiiConnect, Collection } from './taxii2lib';
 
@@ -71,8 +72,10 @@ export class DataService {
                         break;
                     case "malware":
                     case "tool":
-                        let soft = new Software(sdo, this)
-                        domain.software.push(soft);
+                        domain.software.push(new Software(sdo, this));
+                        break;
+                    case "campaign":
+                        domain.campaigns.push(new Campaign(sdo, this));
                         break;
                     case "course-of-action":
                         domain.mitigations.push(new Mitigation(sdo, this));
@@ -103,6 +106,14 @@ export class DataService {
                                 } else {
                                     domain.relationships["software_uses"].set(sdo.source_ref, [sdo.target_ref])
                                 }
+                            } else if (sdo.source_ref.startsWith("campaign") && sdo.target_ref.startsWith("attack-pattern")) {
+                                // record campaign:technique relationship
+                                if (domain.relationships["campaign_uses"].has(sdo.source_ref)) {
+                                    let ids = domain.relationships["campaign_uses"].get(sdo.source_ref);
+                                    ids.push(sdo.target_ref);
+                                } else {
+                                    domain.relationships["campaign_uses"].set(sdo.source_ref, [sdo.target_ref])
+                                }
                             }
                         } else if (sdo.relationship_type == "mitigates") {
                             if (domain.relationships["mitigates"].has(sdo.source_ref)) {
@@ -120,6 +131,13 @@ export class DataService {
                                 ids.push(sdo.target_ref);
                             } else {
                                 domain.relationships["component_rel"].set(sdo.source_ref, [sdo.target_ref])
+                            }
+                        } else if (sdo.relationship_type == "attributed-to") {
+                            if (domain.relationships["campaigns_attributed_to"].has(sdo.target_ref)) {
+                                let ids = domain.relationships["campaigns_attributed_to"].get(sdo.target_ref);
+                                ids.push(sdo.source_ref);
+                            } else {
+                                domain.relationships["campaigns_attributed_to"].set(sdo.target_ref, [sdo.source_ref]); // group -> [campaigns]
                             }
                         }
                         break;
@@ -161,6 +179,7 @@ export class DataService {
 
             //create matrices, which also creates tactics and filters techniques
             for (let matrixSDO of matrixSDOs) {
+                if (matrixSDO.x_mitre_deprecated) continue;
                 domain.matrices.push(new Matrix(matrixSDO, idToTacticSDO, domain.techniques, this));
             }
 
@@ -194,7 +213,7 @@ export class DataService {
     private domainData$: Observable<Object>;
 
     // URLs in case config file doesn't load properly
-    private latestVersion: Version = { name: "ATT&CK v11", number: "11" };
+    private latestVersion: Version = { name: "ATT&CK v12", number: "12" };
     private enterpriseAttackURL: string = "https://raw.githubusercontent.com/mitre/cti/master/enterprise-attack/enterprise-attack.json";
     private mobileAttackURL: string = "https://raw.githubusercontent.com/mitre/cti/master/mobile-attack/mobile-attack.json";
     private icsAttackURL: string = "https://raw.githubusercontent.com/mitre/cti/master/ics-attack/ics-attack.json";
@@ -211,12 +230,12 @@ export class DataService {
             version["domains"].forEach((domain: any) => {
                 let identifier = domain["identifier"];
                 let domainObject = new Domain(identifier, domain["name"], v);
-
+                if (version["authentication"]) domainObject.authentication = version["authentication"];
                 if (domain["taxii_url"] && domain["taxii_collection"]) {
                     domainObject.taxii_url = domain["taxii_url"];
                     domainObject.taxii_collection = domain["taxii_collection"];
                 } else {
-                    domainObject.urls = domain["data"]
+                    domainObject.urls = domain["data"];
                 }
                 this.domains.push(domainObject);
             });
@@ -262,10 +281,16 @@ export class DataService {
         } else if (refresh || !this.domainData$) {
             console.log("retrieving data", domain.urls)
             let bundleData = [];
+            const httpOptions = {
+                headers: undefined
+            }
+            if (domain.authentication && domain.authentication.enabled) { // include authorization header, if configured (integrations)
+                let token = `${domain.authentication.serviceName}:${domain.authentication.apiKey}`;
+                httpOptions.headers = new HttpHeaders({ 'Authorization': 'Basic ' + Buffer.from(token).toString('base64')})
+            }
             domain.urls.forEach((url) => {
-                bundleData.push(this.http.get(url));
+                bundleData.push(this.http.get(url, httpOptions));
             });
-
             this.domainData$ = Observable.forkJoin(bundleData);
         }
         return this.domainData$;
@@ -489,7 +514,10 @@ export class Matrix extends BaseStix {
      */
     constructor(stixSDO: any, idToTacticSDO: Map<string, any>, techniques: Technique[], dataService: DataService) {
         super(stixSDO, dataService);
-        this.tactics = stixSDO.tactic_refs.map((tacticID) => new Tactic(idToTacticSDO.get(tacticID), techniques, this.dataService))
+        this.tactics = stixSDO.tactic_refs
+          .map(tacticID => idToTacticSDO.get(tacticID))  // Get tacticSDOs
+          .filter(tacticSDO => tacticSDO)                // Filter out nulls (tacticSDO not found)
+          .map(tacticSDO => new Tactic(tacticSDO, techniques, this.dataService));  // Create Tactic objects
     }
 }
 
@@ -550,7 +578,9 @@ export class Technique extends BaseStix {
      */
     public get_technique_tactic_id(tactic: string | Tactic): string {
         let tactic_shortname = tactic instanceof Tactic ? tactic.shortname : tactic;
-        if (!this.tactics.includes(tactic_shortname)) throw new Error(tactic_shortname + " is not a tactic of " + this.attackID);
+        if (!this.tactics.includes(tactic_shortname)) {
+            throw new Error(tactic_shortname + " is not a tactic of " + this.attackID);
+        }
         return this.attackID + "^" + tactic_shortname;
     }
 
@@ -683,10 +713,30 @@ export class Group extends BaseStix {
         else return [];
     }
     /**
+     * get techniques used by campaigns attributed to this group
+     * @returns {string[]} technique IDs used by campaigns attributed to this group
+     */
+    public campaignsUsed(domainVersionID): string[] {
+        // get campaigns attributed to groups
+        let attributedCampaigns = this.dataService.getDomain(domainVersionID).relationships.campaigns_attributed_to;
+        // get techniques used by campaigns
+        let rels = this.dataService.getDomain(domainVersionID).relationships.campaign_uses;
+        if (attributedCampaigns.has(this.id)) {
+            // get set of techniques used by attributed campaigns
+            let techniques = [];
+            attributedCampaigns.get(this.id).forEach(campaign_id => {
+                if (rels.has(campaign_id)) techniques = techniques.concat(rels.get(campaign_id))
+            });
+            return techniques;
+        } else return []; // no attributed campaigns
+
+    }
+    /**
      * Return all related techniques
      */
     public relatedTechniques(domainVersionID): string[] {
-        return this.used(domainVersionID);
+        let usedSet = new Set(this.used(domainVersionID).concat(this.campaignsUsed(domainVersionID)));
+        return Array.from(usedSet);
     }
 }
 
@@ -710,6 +760,25 @@ export class Mitigation extends BaseStix {
      */
     public relatedTechniques(domainVersionID): string[] {
         return this.mitigated(domainVersionID);
+    }
+}
+
+export class Campaign extends BaseStix {
+    /**
+     * get techniques used by this campaign
+     * @returns {string[]} technique IDs used by this campaign
+     */
+     public used(domainVersionID): string[] {
+        let rels = this.dataService.getDomain(domainVersionID).relationships.campaign_uses;
+        if (rels.has(this.id)) return rels.get(this.id);
+        else return [];
+    }
+
+    /**
+     * Return all related techniques
+     */
+     public relatedTechniques(domainVersionID): string[] {
+        return this.used(domainVersionID);
     }
 }
 
@@ -738,6 +807,7 @@ export class Domain {
     public urls: string[] = [];
     public taxii_url: string = "";
     public taxii_collection: string = "";
+    public authentication: ServiceAuth;
     public dataLoaded: boolean = false;
     public dataLoadedCallbacks: any[] = [];
 
@@ -754,6 +824,7 @@ export class Domain {
     public platforms: String[] = []; // platforms defined on techniques and software of the domain
     public subtechniques: Technique[] = [];
     public software: Software[] = [];
+    public campaigns: Campaign[] = [];
     public dataComponents: DataComponent[] = [];
     public dataSources = new Map<string, { name: string, external_references: any[] }>(); // Map data source ID to name and urls to be used by data components
     public groups: Group[] = [];
@@ -769,9 +840,15 @@ export class Domain {
         // group uses technique
         // ID of group to [] of technique IDs
         group_uses: new Map<string, string[]>(),
-        // group uses technique
-        // ID of group to [] of technique IDs
+        // software uses technique
+        // ID of software to [] of technique IDs
         software_uses: new Map<string, string[]>(),
+        // campaign uses technique
+        // ID of campaign to [] of technique IDs
+        campaign_uses: new Map<string, string[]>(),
+        // campaigns attributed to group
+        // ID of group to [] of campaign IDs
+        campaigns_attributed_to: new Map<string, string[]>(),
         // mitigation mitigates technique
         // ID of mitigation to [] of technique IDs
         mitigates: new Map<string, string[]>(),
@@ -808,4 +885,10 @@ export class Version {
         this.name = name;
         this.number = number;
     }
+}
+
+export interface ServiceAuth {
+    enabled: boolean;
+    serviceName: string;
+    apiKey: string;
 }
