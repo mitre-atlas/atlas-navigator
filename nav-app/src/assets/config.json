@@ -1,6 +1,17 @@
 {
     "versions": [
         {
+            "name": "ATLAS v4",
+            "version": "4",
+            "domains": [
+                {
+                    "name": "ATLAS",
+                    "identifier": "atlas-atlas",
+                    "data": ["https://raw.githubusercontent.com/mitre-atlas/atlas-navigator-data/main/dist/stix-atlas.json"]
+                }
+            ]
+        },
+        {
             "name": "ATT&CK v12",
             "version": "12",
             "domains": [
