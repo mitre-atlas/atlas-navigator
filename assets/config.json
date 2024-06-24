@@ -6,8 +6,16 @@
             "domains": [
                 {
                     "name": "ATLAS",
+                    "data": [
+                        "https://raw.githubusercontent.com/mitre-atlas/atlas-navigator-data/main/dist/stix-atlas.json"
+                    ]
+                },
+                {
+                    "name": "ATLAS + ATT&CK Enterprise v15.1",
                     "identifier": "atlas-atlas",
-                    "data": ["https://raw.githubusercontent.com/mitre-atlas/atlas-navigator-data/main/dist/stix-atlas.json"]
+                    "data": [
+                        "https://raw.githubusercontent.com/mitre-atlas/atlas-navigator-data/main/dist/stix-atlas-attack-enterprise.json"
+                    ]
                 }
             ]
         },
